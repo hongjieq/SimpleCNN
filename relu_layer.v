@@ -1,11 +1,12 @@
 `timescale 1ns / 1ps
 
 module relu_layer #(parameter RELU_X = 24, parameter RELU_Y = 24, parameter RELU_DATA_WIDTH = 45)(
-	input clk,    // Clock
-	input rst,  // Asynchronous reset active high
+	input clk,    	// Clock
+	input rst,  	// Asynchronous reset active high
 	input relu_enable,
 	input [RELU_DATA_WIDTH-1:0] conv_result_1 [RELU_X-1:0][RELU_Y-1:0],		// 24*24, 45-bit each
 	input [RELU_DATA_WIDTH-1:0] conv_result_2 [RELU_X-1:0][RELU_Y-1:0],
+	input [RELU_DATA_WIDTH-1:0] conv_result_3 [RELU_X-1:0][RELU_Y-1:0],
 	input [RELU_DATA_WIDTH-1:0] conv_result_4 [RELU_X-1:0][RELU_Y-1:0],
 	input [RELU_DATA_WIDTH-1:0] conv_result_5 [RELU_X-1:0][RELU_Y-1:0],
 	input [RELU_DATA_WIDTH-1:0] conv_result_6 [RELU_X-1:0][RELU_Y-1:0],
