@@ -1,6 +1,12 @@
 `timescale 1ns / 1ps
+`define RELU_X 24
+`define RELU_Y 24
+`define RELU_DATA_WIDTH 45
+`define POOL_X 12
+`define POOL_Y 12
+`define STRIDE 2
 
-module pool_layer #(parameter POOL_X = 24, parameter POOL_Y = 24, parameter RELU_DATA_WIDTH = 45, parameter POOL_X = 12, parameter POOL_Y = 12, parameter STRIDE = 2)(
+module pool_layer(
 	input clk,    	// Clock
 	input rst,  	// Asynchronous reset active high
 	input pool_enable,
