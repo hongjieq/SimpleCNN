@@ -88,10 +88,13 @@ module relu_tb;
 		begin
 			$display("-----------------------------RELU Inputs--------------------------");
 			for (i = 0; i < `RELU_X; i++) begin
-				$display("Row = %d", i);
-				for (j = 0; j < `RELU_Y; j++) begin
-					$display("%h", conv_result_5[i][j]);
-				end
+				$display("%h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h", 
+									conv_result_1[i][23],conv_result_1[i][22],conv_result_1[i][21],conv_result_1[i][20],
+									conv_result_1[i][19],conv_result_1[i][18],conv_result_1[i][17],conv_result_1[i][16],
+									conv_result_1[i][15],conv_result_1[i][14],conv_result_1[i][13],conv_result_1[i][12],
+									conv_result_1[i][11],conv_result_1[i][10],conv_result_1[i][9],conv_result_1[i][8],
+									conv_result_1[i][7],conv_result_1[i][6],conv_result_1[i][5],conv_result_1[i][4],
+									conv_result_1[i][3],conv_result_1[i][2],conv_result_1[i][1],conv_result_1[i][0]);
 			end
 		end
 	endtask
@@ -100,10 +103,13 @@ module relu_tb;
 		begin
 			$display("-----------------------------RELU Outputs--------------------------");
 			for (i = 0; i < `RELU_X; i++) begin
-				$display("Row = %d", i);
-				for (j = 0; j < `RELU_Y; j++) begin
-					$display("%h", relu_result_5[i][j]);
-				end
+				$display("%h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h %h", 
+									relu_result_1[i][23],relu_result_1[i][22],relu_result_1[i][21],relu_result_1[i][20],
+									relu_result_1[i][19],relu_result_1[i][18],relu_result_1[i][17],relu_result_1[i][16],
+									relu_result_1[i][15],relu_result_1[i][14],relu_result_1[i][13],relu_result_1[i][12],
+									relu_result_1[i][11],relu_result_1[i][10],relu_result_1[i][9],relu_result_1[i][8],
+									relu_result_1[i][7],relu_result_1[i][6],relu_result_1[i][5],relu_result_1[i][4],
+									relu_result_1[i][3],relu_result_1[i][2],relu_result_1[i][1],relu_result_1[i][0]);
 			end
 			$display("Relu_done: %b", relu_done);
 		end
@@ -120,6 +126,7 @@ module relu_tb;
 		relu_enable = 1'b1;
 		initial_relu_inputs();
 		display_relu_inputs();
+		$display("Relu_done: %b", relu_done);
 		@(negedge clk);
 		display_relu_outputs();
 		$finish;
