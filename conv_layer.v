@@ -37,17 +37,15 @@ module conv_layer (
 	integer y;
 	integer i;
 	integer j;
-	
-	endinterface
 
-	wire [`CONV_SIZE-1:0] next_conv_result_1 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire [`CONV_SIZE-1:0] next_conv_result_2 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire [`CONV_SIZE-1:0] next_conv_result_3 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire [`CONV_SIZE-1:0] next_conv_result_4 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire [`CONV_SIZE-1:0] next_conv_result_5 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire [`CONV_SIZE-1:0] next_conv_result_6 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire [`CONV_SIZE-1:0] next_conv_result_7 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire [`CONV_SIZE-1:0] next_conv_result_8 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg [`CONV_SIZE-1:0] next_conv_result_1 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg [`CONV_SIZE-1:0] next_conv_result_2 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg [`CONV_SIZE-1:0] next_conv_result_3 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg [`CONV_SIZE-1:0] next_conv_result_4 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg [`CONV_SIZE-1:0] next_conv_result_5 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg [`CONV_SIZE-1:0] next_conv_result_6 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg [`CONV_SIZE-1:0] next_conv_result_7 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg [`CONV_SIZE-1:0] next_conv_result_8 [`CONV_X-1:0][`CONV_Y-1:0];
 	
 	always @ (*) begin
 		for (x = 0; x < `CONV_X; x++) begin
@@ -78,34 +76,46 @@ module conv_layer (
 
 	always @ (posedge clk) begin
 		if (rst) begin
-			conv_result_1 <= 0;
-			conv_result_2 <= 0;
-			conv_result_3 <= 0;
-			conv_result_4 <= 0;
-			conv_result_5 <= 0;
-			conv_result_6 <= 0;
-			conv_result_7 <= 0;
-			conv_result_8 <= 0;
+			for (x = 0; x < `CONV_X; x++) begin
+				for (y = 0; y < `CONV_Y; y++) begin
+					conv_result_1[x][y] <= 0;
+					conv_result_2[x][y] <= 0;
+					conv_result_3[x][y] <= 0;
+					conv_result_4[x][y] <= 0;
+					conv_result_5[x][y] <= 0;
+					conv_result_6[x][y] <= 0;
+					conv_result_7[x][y] <= 0;
+					conv_result_8[x][y] <= 0;
+				end
+			end
 			conv_done <= 0;
 		end if (conv_enable) begin
-			conv_result_1 <= next_conv_result_1;
-			conv_result_2 <= next_conv_result_2;
-			conv_result_3 <= next_conv_result_3;
-			conv_result_4 <= next_conv_result_4;
-			conv_result_5 <= next_conv_result_5;
-			conv_result_6 <= next_conv_result_6;
-			conv_result_7 <= next_conv_result_7;
-			conv_result_8 <= next_conv_result_8;
+			for (x = 0; x < `CONV_X; x++) begin
+				for (y = 0; y < `CONV_Y; y++) begin
+					conv_result_1[x][y] <= next_conv_result_1[x][y];
+					conv_result_2[x][y] <= next_conv_result_2[x][y];
+					conv_result_3[x][y] <= next_conv_result_3[x][y];
+					conv_result_4[x][y] <= next_conv_result_4[x][y];
+					conv_result_5[x][y] <= next_conv_result_5[x][y];
+					conv_result_6[x][y] <= next_conv_result_6[x][y];
+					conv_result_7[x][y] <= next_conv_result_7[x][y];
+					conv_result_8[x][y] <= next_conv_result_8[x][y];
+				end
+			end
 			conv_done <= 1'b1;
 		end else begin
-			conv_result_1 <= 0;
-			conv_result_2 <= 0;
-			conv_result_3 <= 0;
-			conv_result_4 <= 0;
-			conv_result_5 <= 0;
-			conv_result_6 <= 0;
-			conv_result_7 <= 0;
-			conv_result_8 <= 0;
+			for (x = 0; x < `CONV_X; x++) begin
+				for (y = 0; y < `CONV_Y; y++) begin
+					conv_result_1[x][y] <= 0;
+					conv_result_2[x][y] <= 0;
+					conv_result_3[x][y] <= 0;
+					conv_result_4[x][y] <= 0;
+					conv_result_5[x][y] <= 0;
+					conv_result_6[x][y] <= 0;
+					conv_result_7[x][y] <= 0;
+					conv_result_8[x][y] <= 0;
+				end
+			end
 			conv_done <= 0;
 		end
 	end
