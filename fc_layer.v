@@ -16,16 +16,16 @@ module fc_layer (
 	input [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0],
 	input [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0],
 	input [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0],
-	input [`WEIGHT_WIDTH-1:0] fc_weight_0 [1151:0], // 12*12*8 = 1152
-	input [`WEIGHT_WIDTH-1:0] fc_weight_1 [1151:0], // 12*12*8 = 1152
-	input [`WEIGHT_WIDTH-1:0] fc_weight_2 [1151:0], 
-	input [`WEIGHT_WIDTH-1:0] fc_weight_3 [1151:0], 
-	input [`WEIGHT_WIDTH-1:0] fc_weight_4 [1151:0], 
-	input [`WEIGHT_WIDTH-1:0] fc_weight_5 [1151:0], 
-	input [`WEIGHT_WIDTH-1:0] fc_weight_6 [1151:0], 
-	input [`WEIGHT_WIDTH-1:0] fc_weight_7 [1151:0], 
-	input [`WEIGHT_WIDTH-1:0] fc_weight_8 [1151:0], 
-	input [`WEIGHT_WIDTH-1:0] fc_weight_9 [1151:0], 
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_0 [1151:0], // 12*12*8 = 1152
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_1 [1151:0], // 12*12*8 = 1152
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_2 [1151:0], 
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_3 [1151:0], 
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_4 [1151:0], 
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_5 [1151:0], 
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_6 [1151:0], 
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_7 [1151:0], 
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_8 [1151:0], 
+	input signed [`WEIGHT_WIDTH-1:0] fc_weight_9 [1151:0], 
 	output reg [31:0] prob_0,
 	output reg [31:0] prob_1,
 	output reg [31:0] prob_2,
