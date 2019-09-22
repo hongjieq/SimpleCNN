@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 `define RELU_X 24
 `define RELU_Y 24
-`define RELU_DATA_WIDTH 45
+`define RELU_DATA_WIDTH 69
 `define POOL_X 12
 `define POOL_Y 12
 `define STRIDE 2

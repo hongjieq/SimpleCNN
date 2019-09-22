@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 `define DATA_X 28
 `define DATA_Y 28
-`define DATA_SIZE 8
+`define DATA_SIZE 32
 `define WEIGHT_X 5
 `define WEIGHT_Y 5
 `define WEIGHT_SIZE 32
 `define CONV_X 24
 `define CONV_Y 24
-`define CONV_SIZE 45
+`define CONV_SIZE 69
 
 module conv_layer (
 	input clk,    // Clock
@@ -50,14 +50,14 @@ module conv_layer (
 	always @ (*) begin
 		for (x = 0; x < `CONV_X; x++) begin
 			for (y = 0; y < `CONV_Y; y++) begin
-				next_conv_result_1[x][y] = 8'b0;
-				next_conv_result_2[x][y] = 8'b0;
-				next_conv_result_3[x][y] = 8'b0;
-				next_conv_result_4[x][y] = 8'b0;
-				next_conv_result_5[x][y] = 8'b0;
-				next_conv_result_6[x][y] = 8'b0;
-				next_conv_result_7[x][y] = 8'b0;
-				next_conv_result_8[x][y] = 8'b0;
+				next_conv_result_1[x][y] = 0;
+				next_conv_result_2[x][y] = 0;
+				next_conv_result_3[x][y] = 0;
+				next_conv_result_4[x][y] = 0;
+				next_conv_result_5[x][y] = 0;
+				next_conv_result_6[x][y] = 0;
+				next_conv_result_7[x][y] = 0;
+				next_conv_result_8[x][y] = 0;
 				for (i = 0; i < `WEIGHT_X; i++) begin
 					for (j = 0; j < `WEIGHT_Y; j++) begin
 						next_conv_result_1[x][y] = next_conv_result_1[x][y] + weight_1[i][j] * data[x+i][y+j];

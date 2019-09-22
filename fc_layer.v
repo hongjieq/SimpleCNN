@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`define RELU_DATA_WIDTH 45
+`define RELU_DATA_WIDTH 69
 `define POOL_X 12
 `define POOL_Y 12
 `define WEIGHT_WIDTH 32
@@ -44,16 +44,16 @@ module fc_layer (
 	integer m;
 
 	reg [`RELU_DATA_WIDTH-1:0] pool_result [1151:0];
-	reg [31:0] next_prob_0;
-	reg [31:0] next_prob_1;
-	reg [31:0] next_prob_2;
-	reg [31:0] next_prob_3;
-	reg [31:0] next_prob_4;
-	reg [31:0] next_prob_5;
-	reg [31:0] next_prob_6;
-	reg [31:0] next_prob_7;
-	reg [31:0] next_prob_8;
-	reg [31:0] next_prob_9;
+	reg [100:0] next_prob_0; // 69+32
+	reg [100:0] next_prob_1;
+	reg [100:0] next_prob_2;
+	reg [100:0] next_prob_3;
+	reg [100:0] next_prob_4;
+	reg [100:0] next_prob_5;
+	reg [100:0] next_prob_6;
+	reg [100:0] next_prob_7;
+	reg [100:0] next_prob_8;
+	reg [100:0] next_prob_9;
 
 	always @ (*) begin
 		for (i = 0; i < `POOL_X; i++) begin
@@ -109,16 +109,16 @@ module fc_layer (
 			prob_9 <= 0;
 			fc_done <= 0;
 		end else if (fc_enable) begin
-			prob_0 <= next_prob_0;
-			prob_1 <= next_prob_1;
-			prob_2 <= next_prob_2;
-			prob_3 <= next_prob_3;
-			prob_4 <= next_prob_4;
-			prob_5 <= next_prob_5;
-			prob_6 <= next_prob_6;
-			prob_7 <= next_prob_7;
-			prob_8 <= next_prob_8;
-			prob_9 <= next_prob_9;
+			prob_0 <= next_prob_0[100:69];
+			prob_1 <= next_prob_1[100:69];
+			prob_2 <= next_prob_2[100:69];
+			prob_3 <= next_prob_3[100:69];
+			prob_4 <= next_prob_4[100:69];
+			prob_5 <= next_prob_5[100:69];
+			prob_6 <= next_prob_6[100:69];
+			prob_7 <= next_prob_7[100:69];
+			prob_8 <= next_prob_8[100:69];
+			prob_9 <= next_prob_9[100:69];
 			fc_done <= 1'b1;
 		end else begin
 			prob_0 <= 0;
