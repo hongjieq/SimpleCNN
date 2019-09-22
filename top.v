@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 `define DATA_X 28
 `define DATA_Y 28
-`define DATA_SIZE 31
+`define DATA_SIZE 32
 `define WEIGHT_X 5
 `define WEIGHT_Y 5
 `define WEIGHT_SIZE 32
@@ -9,12 +9,11 @@
 module top (
 	input clk,    // Clock
 	input rst,  	// Asynchronous reset active high
-	input [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0], // 28*28 32-bit data
-
 	output [3:0] result
 );
 
 // read_data
+	wire [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0], // 28*28 32-bit data
 	wire signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
 	wire signed [`WEIGHT_SIZE-1:0] weight_2 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
 	wire signed [`WEIGHT_SIZE-1:0] weight_3 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
