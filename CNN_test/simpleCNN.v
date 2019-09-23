@@ -15,16 +15,28 @@
 `define POOL_X 12
 `define POOL_Y 12
 `define STRIDE 2
+`define DEBUG
 
 module simpleCNN (
 	input wire clk,    // Clock
 	input wire rst,  	// Asynchronous reset active high
+	input wire enable,
 	output reg [3:0] result
+	`ifdef DEBUG
+		,output reg [31:0] prob [9:0]
+		,output wire signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0]
+		,output wire [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0] // 28*28 32-bit data
+		,output wire [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0]
+		,output wire signed [`CONV_SIZE-1:0] conv_result_1 [`CONV_X-1:0][`CONV_Y-1:0]
+		,output wire conv_done
+	`endif
 );
 
 // read_data
+  `ifndef DEBUG	
 	wire [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0]; // 28*28 32-bit data
 	wire signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	`endif
 	wire signed [`WEIGHT_SIZE-1:0] weight_2 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
 	wire signed [`WEIGHT_SIZE-1:0] weight_3 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
 	wire signed [`WEIGHT_SIZE-1:0] weight_4 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
@@ -45,8 +57,10 @@ module simpleCNN (
 	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_9 [1151:0];
 
 // conv_layer
-	wire conv_enable;
+	reg conv_enable;
+	`ifndef DEBUG
 	wire signed [`CONV_SIZE-1:0] conv_result_1 [`CONV_X-1:0][`CONV_Y-1:0];
+	`endif
 	wire signed [`CONV_SIZE-1:0] conv_result_2 [`CONV_X-1:0][`CONV_Y-1:0];
 	wire signed [`CONV_SIZE-1:0] conv_result_3 [`CONV_X-1:0][`CONV_Y-1:0];
 	wire signed [`CONV_SIZE-1:0] conv_result_4 [`CONV_X-1:0][`CONV_Y-1:0];
@@ -54,7 +68,9 @@ module simpleCNN (
 	wire signed [`CONV_SIZE-1:0] conv_result_6 [`CONV_X-1:0][`CONV_Y-1:0];
 	wire signed [`CONV_SIZE-1:0] conv_result_7 [`CONV_X-1:0][`CONV_Y-1:0];
 	wire signed [`CONV_SIZE-1:0] conv_result_8 [`CONV_X-1:0][`CONV_Y-1:0];
+	`ifndef DEBUG
 	wire conv_done;
+	`endif
 
 // relu_layer
 	wire [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0];
@@ -68,7 +84,9 @@ module simpleCNN (
 	wire relu_done;
 
 // pool_layer
-	wire [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
+	`ifdef DEBUG
+		wire [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
+	`endif
 	wire [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
 	wire [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
 	wire [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
@@ -225,6 +243,7 @@ module simpleCNN (
 			.fc_weight_6(fc_weight_6),
 			.fc_weight_7(fc_weight_7),
 			.fc_weight_8(fc_weight_8),
+			.fc_weight_9(fc_weight_9),
 
 			// OUTPUTS
 			.prob_0(prob_0),
@@ -245,20 +264,22 @@ module simpleCNN (
 	reg [31:0] in_prob_0, in_prob_1, in_prob_2, in_prob_3, in_prob_4, in_prob_5, in_prob_6, in_prob_7, in_prob_8, in_prob_9;
 
 	always @ (fc_done) begin
-		in_prob_0 <= prob_0;
-		in_prob_1 <= prob_1;
-		in_prob_2 <= prob_2;
-		in_prob_3 <= prob_3;
-		in_prob_4 <= prob_4;
-		in_prob_5 <= prob_5;
-		in_prob_6 <= prob_6;
-		in_prob_7 <= prob_7;
-		in_prob_8 <= prob_8;
-		in_prob_9 <= prob_9;
+		in_prob_0 = prob_0;
+		in_prob_1 = prob_1;
+		in_prob_2 = prob_2;
+		in_prob_3 = prob_3;
+		in_prob_4 = prob_4;
+		in_prob_5 = prob_5;
+		in_prob_6 = prob_6;
+		in_prob_7 = prob_7;
+		in_prob_8 = prob_8;
+		in_prob_9 = prob_9;
 	end
 
 	integer i, j;
-	reg [31:0] prob [9:0];
+	`ifndef DEBUG
+		reg [31:0] prob [9:0];
+	`endif
 	reg [31:0] tmp_prob;
 
 	always @ (*) begin
@@ -286,27 +307,33 @@ module simpleCNN (
 
 	always @ (posedge clk) begin
 		if (prob[9] == prob_0)
-			result = 4'd0;
+			result <= 4'd0;
 		else if (prob[9] == prob_1)
-			result = 4'd1;
+			result <= 4'd1;
 		else if (prob[9] == prob_2)
-			result = 4'd2;
+			result <= 4'd2;
 		else if (prob[9] == prob_3)
-			result = 4'd3;
+			result <= 4'd3;
 		else if (prob[9] == prob_4)
-			result = 4'd4;
+			result <= 4'd4;
 		else if (prob[9] == prob_5)
-			result = 4'd5;
+			result <= 4'd5;
 		else if (prob[9] == prob_6)
-			result = 4'd6;
+			result <= 4'd6;
 		else if (prob[9] == prob_7)
-			result = 4'd7;
+			result <= 4'd7;
 		else if (prob[9] == prob_8)
-			result = 4'd8;
+			result <= 4'd8;
 		else if (prob[9] == prob_9)
-			result = 4'd9;
+			result <= 4'd9;
 		else
-			result = 4'd15;
+			result <= 4'd15;
+	end
+
+	always @ (posedge clk) begin
+		if (rst) conv_enable <= 1'b0;
+		//else if (enable) conv_enable <= 1'b1;
+		else conv_enable <= 1'b1;
 	end
 
 endmodule

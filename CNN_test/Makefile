@@ -23,7 +23,7 @@ all:	simv
 #####
 
 TESTBENCH = simpleCNN_tb.v
-SIMFILES = simpleCNN.v
+SIMFILES = simpleCNN.v read_data.v conv_layer.v relu_layer.v pool_layer.v fc_layer.v
 SYNFILES = simpleCNN.vg
 
 
