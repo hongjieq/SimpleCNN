@@ -297,7 +297,7 @@ module top (
 		else if (prob[9] = prob_9)
 			result = 4'd9;
 		else
-			result = 4'd16;
+			result = 4'd15;
 	end
 
 endmodule

@@ -29,3 +29,5 @@ module simpleCNN_tb();
 		$finish;
 		
 	end
+	
+endmodule
