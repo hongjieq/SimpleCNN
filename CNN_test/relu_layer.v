@@ -15,28 +15,28 @@ module relu_layer(
 	input signed [`RELU_DATA_WIDTH-1:0] conv_result_6 [`RELU_X-1:0][`RELU_Y-1:0],
 	input signed [`RELU_DATA_WIDTH-1:0] conv_result_7 [`RELU_X-1:0][`RELU_Y-1:0],
 	input signed [`RELU_DATA_WIDTH-1:0] conv_result_8 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0],
 	output reg relu_done
 );
 	
 	integer i;
 	integer j;
 
-	reg [`RELU_DATA_WIDTH-1:0] next_relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0];
 
 	always @ (*) begin
 		for (i = 0; i < `RELU_X; i++) begin

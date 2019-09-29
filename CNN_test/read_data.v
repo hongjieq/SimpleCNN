@@ -3,7 +3,7 @@
 module read_data (
 	input clk,    // Clock
 	input rst,  // Asynchronous reset active high
-	output reg [31:0] data [27:0][27:0],
+	output reg signed [31:0] data [27:0][27:0],
 	output reg signed [31:0] weight_1 [4:0][4:0],
 	output reg signed [31:0] weight_2 [4:0][4:0],
 	output reg signed [31:0] weight_3 [4:0][4:0],

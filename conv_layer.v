@@ -47,6 +47,15 @@ module conv_layer (
 	reg signed [`CONV_SIZE-1:0] next_conv_result_7 [`CONV_X-1:0][`CONV_Y-1:0];
 	reg signed [`CONV_SIZE-1:0] next_conv_result_8 [`CONV_X-1:0][`CONV_Y-1:0];
 	
+	reg signed [63:0] temp1;
+	reg signed [63:0] temp2;
+	reg signed [63:0] temp3;
+	reg signed [63:0] temp4;
+	reg signed [63:0] temp5;
+	reg signed [63:0] temp6;
+	reg signed [63:0] temp7;
+	reg signed [63:0] temp8;
+	
 	always @ (*) begin
 		for (x = 0; x < `CONV_X; x++) begin
 			for (y = 0; y < `CONV_Y; y++) begin
@@ -60,14 +69,22 @@ module conv_layer (
 				next_conv_result_8[x][y] = 0;
 				for (i = 0; i < `WEIGHT_X; i++) begin
 					for (j = 0; j < `WEIGHT_Y; j++) begin
-						next_conv_result_1[x][y] = next_conv_result_1[x][y] + weight_1[i][j] * data[x+i][y+j];
-						next_conv_result_2[x][y] = next_conv_result_2[x][y] + weight_2[i][j] * data[x+i][y+j];
-						next_conv_result_3[x][y] = next_conv_result_3[x][y] + weight_3[i][j] * data[x+i][y+j];
-						next_conv_result_4[x][y] = next_conv_result_4[x][y] + weight_4[i][j] * data[x+i][y+j];
-						next_conv_result_5[x][y] = next_conv_result_5[x][y] + weight_5[i][j] * data[x+i][y+j];
-						next_conv_result_6[x][y] = next_conv_result_6[x][y] + weight_6[i][j] * data[x+i][y+j];
-						next_conv_result_7[x][y] = next_conv_result_7[x][y] + weight_7[i][j] * data[x+i][y+j];
-						next_conv_result_8[x][y] = next_conv_result_8[x][y] + weight_8[i][j] * data[x+i][y+j];
+						temp1 = weight_1[i][j] * data[x+i][y+j];
+						next_conv_result_1[x][y] = next_conv_result_1[x][y] + temp1;
+						temp2 = weight_2[i][j] * data[x+i][y+j];
+						next_conv_result_2[x][y] = next_conv_result_2[x][y] + temp2;
+						twmp3 = weight_3[i][j] * data[x+i][y+j];
+						next_conv_result_3[x][y] = next_conv_result_3[x][y] + temp3;
+						temp4 = weight_4[i][j] * data[x+i][y+j];
+						next_conv_result_4[x][y] = next_conv_result_4[x][y] + temp4;
+						temp5 = weight_5[i][j] * data[x+i][y+j];
+						next_conv_result_5[x][y] = next_conv_result_5[x][y] + temp5;
+						temp6 = weight_6[i][j] * data[x+i][y+j];
+						next_conv_result_6[x][y] = next_conv_result_6[x][y] + temp6;
+						temp7 = weight_7[i][j] * data[x+i][y+j];
+						next_conv_result_7[x][y] = next_conv_result_7[x][y] + temp7;
+						temp8 = weight_8[i][j] * data[x+i][y+j];
+						next_conv_result_8[x][y] = next_conv_result_8[x][y] + temp8;
 					end
 				end
 			end

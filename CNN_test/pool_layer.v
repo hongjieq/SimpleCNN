@@ -10,22 +10,22 @@ module pool_layer(
 	input clk,    	// Clock
 	input rst,  	// Asynchronous reset active high
 	input pool_enable,
-	input [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0],		// 24*24, 45-bit each
-	input [`RELU_DATA_WIDTH-1:0] relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0],
-	output reg [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0],		// 24*24, 45-bit each
+	input signed [`RELU_DATA_WIDTH-1:0] relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0],
+	output reg signed [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0],
 	output reg pool_done
 );
 	
@@ -34,23 +34,23 @@ module pool_layer(
 	integer i;
 	integer j;
 
-	reg [`RELU_DATA_WIDTH-1:0] next_pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] next_pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] next_pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
 
-	reg [`RELU_DATA_WIDTH-1:0] temp_pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] temp_pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] temp_pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] temp_pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] temp_pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] temp_pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] temp_pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
-	reg [`RELU_DATA_WIDTH-1:0] temp_pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] temp_pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] temp_pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] temp_pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] temp_pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] temp_pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] temp_pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] temp_pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] temp_pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
 
 	always @ (*) begin
 		for (x = 0; x < `POOL_X; x++) begin

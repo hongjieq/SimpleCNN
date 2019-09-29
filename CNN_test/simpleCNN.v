@@ -23,23 +23,23 @@ module simpleCNN (
 	input wire enable,
 	output reg [3:0] result
 	`ifdef DEBUG
-		,output reg [31:0] prob [9:0]
+		,output reg signed [112:0] prob [9:0]
 		,output wire signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0]
-		,output wire [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0] // 28*28 32-bit data
+		,output wire signed [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0] // 28*28 32-bit data
 		,output wire signed [`WEIGHT_WIDTH-1:0] fc_weight_0 [1151:0]	
 		,output reg conv_enable
 		,output wire signed [`CONV_SIZE-1:0] conv_result_1 [`CONV_X-1:0][`CONV_Y-1:0]
 		,output wire conv_done
-		,output wire [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0]
+		,output wire signed [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0]
 		,output wire relu_done
-		,output wire [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0]
+		,output wire signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0]
 		,output wire pool_done
 	`endif
 );
 
 // read_data
   `ifndef DEBUG	
-	wire [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0]; // 28*28 32-bit data
+	wire signed [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0]; // 28*28 32-bit data
 	wire signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
 	`endif
 	wire signed [`WEIGHT_SIZE-1:0] weight_2 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
@@ -81,45 +81,45 @@ module simpleCNN (
 
 // relu_layer
 	`ifndef DEBUG
-	wire [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0];
 	`endif
-	wire [`RELU_DATA_WIDTH-1:0] relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0];
 	`ifdef DEBUG
 	wire relu_done;
 	`endif
 
 // pool_layer
 	`ifdef DEBUG
-		wire [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
+		wire signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
 	`endif
-	wire [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
+	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
 	`ifdef DEBUG
 	wire pool_done;
 	`endif
 
 // fc_layer
-	wire [31:0] prob_0;
-	wire [31:0] prob_1;
-	wire [31:0] prob_2;
-	wire [31:0] prob_3;
-	wire [31:0] prob_4;
-	wire [31:0] prob_5;
-	wire [31:0] prob_6;
-	wire [31:0] prob_7;
-	wire [31:0] prob_8;
-	wire [31:0] prob_9;
+	wire signed [112:0] prob_0;
+	wire signed [112:0] prob_1;
+	wire signed [112:0] prob_2;
+	wire signed [112:0] prob_3;
+	wire signed [112:0] prob_4;
+	wire signed [112:0] prob_5;
+	wire signed [112:0] prob_6;
+	wire signed [112:0] prob_7;
+	wire signed [112:0] prob_8;
+	wire signed [112:0] prob_9;
 	wire fc_done;
 	
 // read_data
@@ -274,7 +274,7 @@ module simpleCNN (
 
 // Compare prob0-prob9 and get result
 
-	reg [31:0] in_prob_0, in_prob_1, in_prob_2, in_prob_3, in_prob_4, in_prob_5, in_prob_6, in_prob_7, in_prob_8, in_prob_9;
+	reg signed [112:0] in_prob_0, in_prob_1, in_prob_2, in_prob_3, in_prob_4, in_prob_5, in_prob_6, in_prob_7, in_prob_8, in_prob_9;
 
 	always @ (fc_done) begin
 		in_prob_0 = prob_0;
@@ -291,11 +291,11 @@ module simpleCNN (
 
 	integer i, j;
 	`ifndef DEBUG
-		reg [31:0] prob [9:0];
+		reg signed [112:0] prob [9:0];
 	`endif
-	reg [31:0] tmp_prob;
+	reg signed [112:0] tmp_prob;
 	reg [3:0] next_result;
-	reg [31:0] max_prob;
+	reg signed [112:0] max_prob;
 
 	always @ (*) begin
 		prob[0] = in_prob_0;

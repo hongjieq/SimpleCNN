@@ -8,14 +8,14 @@ module fc_layer (
 	input clk,    // Clock
 	input rst,  // Asynchronous reset active high
 	input fc_enable,
-	input [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0],
-	input [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0],
+	input signed [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0],
 	input signed [`WEIGHT_WIDTH-1:0] fc_weight_0 [1151:0], // 12*12*8 = 1152
 	input signed [`WEIGHT_WIDTH-1:0] fc_weight_1 [1151:0], // 12*12*8 = 1152
 	input signed [`WEIGHT_WIDTH-1:0] fc_weight_2 [1151:0], 
@@ -26,16 +26,16 @@ module fc_layer (
 	input signed [`WEIGHT_WIDTH-1:0] fc_weight_7 [1151:0], 
 	input signed [`WEIGHT_WIDTH-1:0] fc_weight_8 [1151:0], 
 	input signed [`WEIGHT_WIDTH-1:0] fc_weight_9 [1151:0], 
-	output reg [31:0] prob_0,
-	output reg [31:0] prob_1,
-	output reg [31:0] prob_2,
-	output reg [31:0] prob_3,
-	output reg [31:0] prob_4,
-	output reg [31:0] prob_5,
-	output reg [31:0] prob_6,
-	output reg [31:0] prob_7,
-	output reg [31:0] prob_8,
-	output reg [31:0] prob_9,
+	output reg signed [112:0] prob_0,
+	output reg signed [112:0] prob_1,
+	output reg signed [112:0] prob_2,
+	output reg signed [112:0] prob_3,
+	output reg signed [112:0] prob_4,
+	output reg signed [112:0] prob_5,
+	output reg signed [112:0] prob_6,
+	output reg signed [112:0] prob_7,
+	output reg signed [112:0] prob_8,
+	output reg signed [112:0] prob_9,
 	output reg fc_done
 );
 
@@ -43,29 +43,40 @@ module fc_layer (
 	integer j;
 	integer m;
 
-	reg [`RELU_DATA_WIDTH-1:0] pool_result [1151:0];
-	reg [100:0] next_prob_0; // 69+32
-	reg [100:0] next_prob_1;
-	reg [100:0] next_prob_2;
-	reg [100:0] next_prob_3;
-	reg [100:0] next_prob_4;
-	reg [100:0] next_prob_5;
-	reg [100:0] next_prob_6;
-	reg [100:0] next_prob_7;
-	reg [100:0] next_prob_8;
-	reg [100:0] next_prob_9;
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result [1151:0];
+	reg signed [112:0] next_prob_0; // 69+32
+	reg signed [112:0] next_prob_1;
+	reg signed [112:0] next_prob_2;
+	reg signed [112:0] next_prob_3;
+	reg signed [112:0] next_prob_4;
+	reg signed [112:0] next_prob_5;
+	reg signed [112:0] next_prob_6;
+	reg signed [112:0] next_prob_7;
+	reg signed [112:0] next_prob_8;
+	reg signed [112:0] next_prob_9;
 	
-	reg [`WEIGHT_WIDTH-1:0] temp_0 [1151:0]; // 12*12*8 = 1152
-	reg [`WEIGHT_WIDTH-1:0] temp_1 [1151:0]; // 12*12*8 = 1152
-	reg [`WEIGHT_WIDTH-1:0] temp_2 [1151:0]; 
-	reg [`WEIGHT_WIDTH-1:0] temp_3 [1151:0]; 
-	reg [`WEIGHT_WIDTH-1:0] temp_4 [1151:0]; 
-	reg [`WEIGHT_WIDTH-1:0] temp_5 [1151:0]; 
-	reg [`WEIGHT_WIDTH-1:0] temp_6 [1151:0]; 
-	reg [`WEIGHT_WIDTH-1:0] temp_7 [1151:0]; 
-	reg [`WEIGHT_WIDTH-1:0] temp_8 [1151:0]; 
-	reg [`WEIGHT_WIDTH-1:0] temp_9 [1151:0]; 
-
+	reg signed [`WEIGHT_WIDTH-1:0] temp_0 [1151:0]; // 12*12*8 = 1152
+	reg signed [`WEIGHT_WIDTH-1:0] temp_1 [1151:0]; // 12*12*8 = 1152
+	reg signed [`WEIGHT_WIDTH-1:0] temp_2 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] temp_3 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] temp_4 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] temp_5 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] temp_6 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] temp_7 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] temp_8 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] temp_9 [1151:0]; 
+	
+	reg signed [100:0] temp0;
+	reg signed [100:0] temp1;
+	reg signed [100:0] temp2;
+	reg signed [100:0] temp3;
+	reg signed [100:0] temp4;
+	reg signed [100:0] temp5;
+	reg signed [100:0] temp6;
+	reg signed [100:0] temp7;
+	reg signed [100:0] temp8;
+	reg signed [100:0] temp9;
+	
 	always @ (*) begin
 		for (i = 0; i < `POOL_X; i++) begin
 			for (j = 0; j < `POOL_Y; j++) begin
@@ -95,63 +106,83 @@ module fc_layer (
 		for (m = 0; m < 1152; m++) begin
 			if (fc_weight_0[m] < 0) begin
 				temp_0[m] = -fc_weight_0[m];
-				next_prob_0 = next_prob_0 - temp_0[m] * pool_result[m];
+				temp0 = temp_0[m] * pool_result[m];
+				next_prob_0 = next_prob_0 - temp0;
 			end else begin
-				next_prob_0 = next_prob_0 + fc_weight_0[m] * pool_result[m];
+				temp0 = fc_weight_0[m] * pool_result[m];
+				next_prob_0 = next_prob_0 + temp0;
 			end
 			if (fc_weight_1[m] < 0) begin
 				temp_1[m] = -fc_weight_1[m];
-				next_prob_1 = next_prob_1 - temp_1[m] * pool_result[m];
+				temp1 = -temp_1[m] * pool_result[m];
+				next_prob_1 = next_prob_1 + temp1;
 			end else begin
-				next_prob_1 = next_prob_1 + fc_weight_1[m] * pool_result[m];
+				temp1 = fc_weight_1[m] * pool_result[m];
+				next_prob_1 = next_prob_1 + temp1;
 			end
 			if (fc_weight_2[m] < 0) begin
 				temp_2[m] = -fc_weight_2[m];
-				next_prob_2 = next_prob_2 - temp_2[m] * pool_result[m];
+				temp2 = - temp_2[m] * pool_result[m];
+				next_prob_2 = next_prob_2 + temp2;
 			end else begin
-				next_prob_2 = next_prob_2 + fc_weight_2[m] * pool_result[m];
+				temp2 = fc_weight_2[m] * pool_result[m];
+				next_prob_2 = next_prob_2 + temp2;
 			end
 			if (fc_weight_3[m] < 0) begin
 				temp_3[m] = -fc_weight_3[m];
-				next_prob_3 = next_prob_3 - temp_3[m] * pool_result[m];
+				temp3 = - temp_3[m] * pool_result[m];
+				next_prob_3 = next_prob_3 + temp3;
 			end else begin
-				next_prob_3 = next_prob_3 + fc_weight_3[m] * pool_result[m];
+				temp3 = fc_weight_3[m] * pool_result[m];
+				next_prob_3 = next_prob_3 + temp3;
 			end
 			if (fc_weight_4[m] < 0) begin
 				temp_4[m] = -fc_weight_4[m];
-				next_prob_4 = next_prob_4 - temp_4[m] * pool_result[m];
+				temp4 = -temp_4[m] * pool_result[m];
+				next_prob_4 = next_prob_4 + temp4;
 			end else begin
-				next_prob_4 = next_prob_4 + fc_weight_4[m] * pool_result[m];
+				temp4 = fc_weight_4[m] * pool_result[m];
+				next_prob_4 = next_prob_4 + temp4;
 			end
 			if (fc_weight_5[m] < 0) begin
 				temp_5[m] = -fc_weight_5[m];
-				next_prob_5 = next_prob_5 - temp_5[m] * pool_result[m];
+				temp5 = - temp_5[m] * pool_result[m];
+				next_prob_5 = next_prob_5 + temp5;
 			end else begin
-				next_prob_5 = next_prob_5 + fc_weight_5[m] * pool_result[m];
+				temp5 = fc_weight_5[m] * pool_result[m];
+				next_prob_5 = next_prob_5 + temp5;
 			end
 			if (fc_weight_6[m] < 0) begin
 				temp_6[m] = -fc_weight_6[m];
-				next_prob_6 = next_prob_6 - temp_6[m] * pool_result[m];
+				temp6 = - temp_6[m] * pool_result[m];
+				next_prob_6 = next_prob_6 + temp6;
 			end else begin
-				next_prob_6 = next_prob_6 + fc_weight_6[m] * pool_result[m];
+				temp6 = fc_weight_6[m] * pool_result[m];
+				next_prob_6 = next_prob_6 + temp6;
 			end
 			if (fc_weight_7[m] < 0) begin
 				temp_7[m] = -fc_weight_7[m];
-				next_prob_7 = next_prob_7 - temp_7[m] * pool_result[m];
+				temp7 = - temp_7[m] * pool_result[m];
+				next_prob_7 = next_prob_7 + temp7;
 			end else begin
-				next_prob_7 = next_prob_7 + fc_weight_7[m] * pool_result[m];
+				temp7 = fc_weight_7[m] * pool_result[m];
+				next_prob_7 = next_prob_7 + temp7;
 			end
 			if (fc_weight_8[m] < 0) begin
 				temp_8[m] = -fc_weight_8[m];
-				next_prob_8 = next_prob_8 - temp_8[m] * pool_result[m];
+				temp8 = - temp_8[m] * pool_result[m];
+				next_prob_8 = next_prob_8 + temp8;
 			end else begin
-				next_prob_8 = next_prob_8 + fc_weight_8[m] * pool_result[m];
+				temp8 = fc_weight_8[m] * pool_result[m];
+				next_prob_8 = next_prob_8 + temp8;
 			end
 			if (fc_weight_9[m] < 0) begin
 				temp_9[m] = -fc_weight_9[m];
-				next_prob_9 = next_prob_9 - temp_9[m] * pool_result[m];
+				temp9 = - temp_9[m] * pool_result[m];
+				next_prob_9 = next_prob_9 + temp9;
 			end else begin
-				next_prob_9 = next_prob_9 + fc_weight_9[m] * pool_result[m];
+				temp9 = fc_weight_9[m] * pool_result[m];
+				next_prob_9 = next_prob_9 + temp9;
 			end
 		end
 	end
@@ -170,16 +201,16 @@ module fc_layer (
 			prob_9 <= 0;
 			fc_done <= 0;
 		end else if (fc_enable) begin
-			prob_0 <= next_prob_0[100:69];
-			prob_1 <= next_prob_1[100:69];
-			prob_2 <= next_prob_2[100:69];
-			prob_3 <= next_prob_3[100:69];
-			prob_4 <= next_prob_4[100:69];
-			prob_5 <= next_prob_5[100:69];
-			prob_6 <= next_prob_6[100:69];
-			prob_7 <= next_prob_7[100:69];
-			prob_8 <= next_prob_8[100:69];
-			prob_9 <= next_prob_9[100:69];
+			prob_0 <= next_prob_0;
+			prob_1 <= next_prob_1;
+			prob_2 <= next_prob_2;
+			prob_3 <= next_prob_3;
+			prob_4 <= next_prob_4;
+			prob_5 <= next_prob_5;
+			prob_6 <= next_prob_6;
+			prob_7 <= next_prob_7;
+			prob_8 <= next_prob_8;
+			prob_9 <= next_prob_9;
 			fc_done <= 1'b1;
 		end else begin
 			prob_0 <= 0;
