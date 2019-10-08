@@ -102,7 +102,7 @@ module conv_layer (
 							temp3 = weight_3[i][j] * data[x+i][y+j];
 							next_conv_result_3[x][y] = next_conv_result_3[x][y] + temp3;
 						end
-						if (weight_1[i][j] < 0) begin
+						if (weight_4[i][j] < 0) begin
 							temp_4[i][j] = -weight_4[i][j];
 							temp4 = - temp_4[i][j] * data[x+i][y+j];
 							next_conv_result_4[x][y] = next_conv_result_4[x][y] + temp4;

@@ -90,12 +90,12 @@ module simpleCNN (
 	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0];
 	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0];
 	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0];
-	`ifdef DEBUG
+	`ifndef DEBUG
 	wire relu_done;
 	`endif
 
 // pool_layer
-	`ifdef DEBUG
+	`ifndef DEBUG
 		wire signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
 	`endif
 	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
@@ -105,7 +105,7 @@ module simpleCNN (
 	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
 	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
 	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
-	`ifdef DEBUG
+	`ifndef DEBUG
 	wire pool_done;
 	`endif
 
