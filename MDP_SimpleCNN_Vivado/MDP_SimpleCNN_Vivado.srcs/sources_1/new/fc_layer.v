@@ -28,24 +28,24 @@ module fc_layer (
 	input clk,    // Clock
 	input rst,  // Asynchronous reset active high
 	input fc_enable,
-	input signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0],
-	input signed [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0],
-	input signed [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0],
-	input signed [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0],
-	input signed [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0],
-	input signed [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0],
-	input signed [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0],
-	input signed [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0],
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_0 [1151:0], // 12*12*8 = 1152
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_1 [1151:0], // 12*12*8 = 1152
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_2 [1151:0], 
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_3 [1151:0], 
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_4 [1151:0], 
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_5 [1151:0], 
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_6 [1151:0], 
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_7 [1151:0], 
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_8 [1151:0], 
-	input signed [`WEIGHT_WIDTH-1:0] fc_weight_9 [1151:0], 
+	input signed [9935:0] pool_result_1_f,
+	input signed [9935:0] pool_result_2_f,
+	input signed [9935:0] pool_result_3_f,
+	input signed [9935:0] pool_result_4_f,
+	input signed [9935:0] pool_result_5_f,
+	input signed [9935:0] pool_result_6_f,
+	input signed [9935:0] pool_result_7_f,
+	input signed [9935:0] pool_result_8_f,
+	input signed [36863:0] fc_weight_0_f,
+	input signed [36863:0] fc_weight_1_f,
+	input signed [36863:0] fc_weight_2_f,
+	input signed [36863:0] fc_weight_3_f,
+	input signed [36863:0] fc_weight_4_f,
+	input signed [36863:0] fc_weight_5_f,
+	input signed [36863:0] fc_weight_6_f,
+	input signed [36863:0] fc_weight_7_f,
+	input signed [36863:0] fc_weight_8_f,
+	input signed [36863:0] fc_weight_9_f,
 	output reg signed [112:0] prob_0,
 	output reg signed [112:0] prob_1,
 	output reg signed [112:0] prob_2,
@@ -62,6 +62,25 @@ module fc_layer (
 	integer i;
 	integer j;
 	integer m;
+	
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_0 [1151:0]; // 12*12*8 = 1152
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_1 [1151:0]; // 12*12*8 = 1152
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_2 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_3 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_4 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_5 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_6 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_7 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_8 [1151:0]; 
+	reg signed [`WEIGHT_WIDTH-1:0] fc_weight_9 [1151:0]; 
 
 	reg signed [`RELU_DATA_WIDTH-1:0] pool_result [1151:0];
 	reg signed [112:0] next_prob_0; // 69+32
@@ -96,6 +115,33 @@ module fc_layer (
 	reg signed [100:0] temp7;
 	reg signed [100:0] temp8;
 	reg signed [100:0] temp9;
+	
+	always @ (*) begin
+		for (i = 0; i < 12; i = i+1) begin
+			for (j = 0; j < 12; j = i+1) begin
+				pool_result_1[i][j] = pool_result_1_f[828*i+69*j+:69];
+				pool_result_2[i][j] = pool_result_2_f[828*i+69*j+:69];
+				pool_result_3[i][j] = pool_result_3_f[828*i+69*j+:69];
+				pool_result_4[i][j] = pool_result_4_f[828*i+69*j+:69];
+				pool_result_5[i][j] = pool_result_5_f[828*i+69*j+:69];
+				pool_result_6[i][j] = pool_result_6_f[828*i+69*j+:69];
+				pool_result_7[i][j] = pool_result_7_f[828*i+69*j+:69];
+				pool_result_8[i][j] = pool_result_8_f[828*i+69*j+:69];
+			end
+		end
+		for (i = 0; i < 1152; i++) begin
+			fc_weight_0[i] = fc_weight_0_f[i*32+:32];
+			fc_weight_1[i] = fc_weight_1_f[i*32+:32];
+			fc_weight_2[i] = fc_weight_2_f[i*32+:32];
+			fc_weight_3[i] = fc_weight_3_f[i*32+:32];
+			fc_weight_4[i] = fc_weight_4_f[i*32+:32];
+			fc_weight_5[i] = fc_weight_5_f[i*32+:32];
+			fc_weight_6[i] = fc_weight_6_f[i*32+:32];
+			fc_weight_7[i] = fc_weight_7_f[i*32+:32];
+			fc_weight_8[i] = fc_weight_8_f[i*32+:32];
+			fc_weight_9[i] = fc_weight_9_f[i*32+:32];
+		end
+	end
 	
 	always @ (*) begin
 		for (i = 0; i < `POOL_X; i = i+1) begin

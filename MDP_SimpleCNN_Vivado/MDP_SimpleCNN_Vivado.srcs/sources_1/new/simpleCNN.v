@@ -21,7 +21,9 @@ module simpleCNN (
 	input wire clk,    // Clock
 	input wire rst,  	// Asynchronous reset active high
 	input wire enable,
-	output reg [3:0] result
+	output reg [3:0] result,
+	output reg signed [112:0] prob [9:0]
+	/*
 	`ifdef DEBUG
 		,output reg signed [112:0] prob [9:0]
 		,output wire signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0]
@@ -35,79 +37,81 @@ module simpleCNN (
 		,output wire signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0]
 		,output wire pool_done
 	`endif
+	*/
 );
 
 // read_data
-  `ifndef DEBUG	
-	wire signed [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0]; // 28*28 32-bit data
-	wire signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
-	`endif
-	wire signed [`WEIGHT_SIZE-1:0] weight_2 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
-	wire signed [`WEIGHT_SIZE-1:0] weight_3 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
-	wire signed [`WEIGHT_SIZE-1:0] weight_4 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
-	wire signed [`WEIGHT_SIZE-1:0] weight_5 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
-	wire signed [`WEIGHT_SIZE-1:0] weight_6 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
-	wire signed [`WEIGHT_SIZE-1:0] weight_7 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
-	wire signed [`WEIGHT_SIZE-1:0] weight_8 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+  //`ifndef DEBUG	
+	wire signed [25087:0] data_f; // 28*28 32-bit data
+	wire signed [799:0] weight_1_f;
+	//`endif
+	wire signed [799:0] weight_2_f;
+	wire signed [799:0] weight_3_f;
+	wire signed [799:0] weight_4_f;
+	wire signed [799:0] weight_5_f;
+	wire signed [799:0] weight_6_f;
+	wire signed [799:0] weight_7_f;
+	wire signed [799:0] weight_8_f;
 
-	`ifndef DEBUG	
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_0 [1151:0]; // 12*12*8 = 1152
-	`endif
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_1 [1151:0];
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_2 [1151:0];
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_3 [1151:0];
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_4 [1151:0];
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_5 [1151:0];
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_6 [1151:0];
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_7 [1151:0];
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_8 [1151:0];
-	wire signed [`WEIGHT_WIDTH-1:0] fc_weight_9 [1151:0];
+	//`ifndef DEBUG	
+	wire signed [36863:0] fc_weight_0_f; // 12*12*8 = 1152
+	//`endif
+	wire signed [36863:0] fc_weight_1_f;
+	wire signed [36863:0] fc_weight_2_f;
+	wire signed [36863:0] fc_weight_3_f;
+	wire signed [36863:0] fc_weight_4_f;
+	wire signed [36863:0] fc_weight_5_f;
+	wire signed [36863:0] fc_weight_6_f;
+	wire signed [36863:0] fc_weight_7_f;
+	wire signed [36863:0] fc_weight_8_f;
+	wire signed [36863:0] fc_weight_9_f;
 
 // conv_layer
-	`ifndef DEBUG
+	//`ifndef DEBUG
 	reg conv_enable;	
-	wire signed [`CONV_SIZE-1:0] conv_result_1 [`CONV_X-1:0][`CONV_Y-1:0];
-	`endif
-	wire signed [`CONV_SIZE-1:0] conv_result_2 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire signed [`CONV_SIZE-1:0] conv_result_3 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire signed [`CONV_SIZE-1:0] conv_result_4 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire signed [`CONV_SIZE-1:0] conv_result_5 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire signed [`CONV_SIZE-1:0] conv_result_6 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire signed [`CONV_SIZE-1:0] conv_result_7 [`CONV_X-1:0][`CONV_Y-1:0];
-	wire signed [`CONV_SIZE-1:0] conv_result_8 [`CONV_X-1:0][`CONV_Y-1:0];
-	`ifndef DEBUG
+	wire signed [39743:0] conv_result_1_f;
+	//`endif
+	wire signed [39743:0] conv_result_2_f;
+	wire signed [39743:0] conv_result_3_f;
+	wire signed [39743:0] conv_result_4_f;
+	wire signed [39743:0] conv_result_5_f;
+	wire signed [39743:0] conv_result_6_f;
+	wire signed [39743:0] conv_result_7_f;
+	wire signed [39743:0] conv_result_8_f;
+	//`ifndef DEBUG
 	wire conv_done;
-	`endif
+	//`endif
 
 // relu_layer
-	`ifndef DEBUG
-	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_1 [`RELU_X-1:0][`RELU_Y-1:0];
-	`endif
-	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_2 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_3 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_4 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_5 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_6 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_7 [`RELU_X-1:0][`RELU_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] relu_result_8 [`RELU_X-1:0][`RELU_Y-1:0];
-	`ifndef DEBUG
+	//`ifndef DEBUG
+	wire signed [39743:0] relu_result_1_f;
+	//`endif
+	wire signed [39743:0] relu_result_2_f;
+	wire signed [39743:0] relu_result_3_f;
+	wire signed [39743:0] relu_result_4_f;
+	wire signed [39743:0] relu_result_5_f;
+	wire signed [39743:0] relu_result_6_f;
+	wire signed [39743:0] relu_result_7_f;
+	wire signed [39743:0] relu_result_8_f;
+	
+	//`ifndef DEBUG
 	wire relu_done;
-	`endif
+	//`endif
 
 // pool_layer
-	`ifndef DEBUG
-		wire signed [`RELU_DATA_WIDTH-1:0] pool_result_1 [`POOL_X-1:0][`POOL_Y-1:0];
-	`endif
-	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_2 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_3 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_4 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_5 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_6 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_7 [`POOL_X-1:0][`POOL_Y-1:0];
-	wire signed [`RELU_DATA_WIDTH-1:0] pool_result_8 [`POOL_X-1:0][`POOL_Y-1:0];
-	`ifndef DEBUG
+	//`ifndef DEBUG
+		wire signed [9935:0] pool_result_1_f;
+	//`endif
+	wire signed [9935:0] pool_result_2_f;
+	wire signed [9935:0] pool_result_3_f;
+	wire signed [9935:0] pool_result_4_f;
+	wire signed [9935:0] pool_result_5_f;
+	wire signed [9935:0] pool_result_6_f;
+	wire signed [9935:0] pool_result_7_f;
+	wire signed [9935:0] pool_result_8_f;
+	//`ifndef DEBUG
 	wire pool_done;
-	`endif
+	//`endif
 
 // fc_layer
 	wire signed [112:0] prob_0;
@@ -129,25 +133,25 @@ module simpleCNN (
 	 	.rst(rst),
 
 		// OUTPUTS
-		.data(data),
-		.weight_1(weight_1),
-		.weight_2(weight_2),
-		.weight_3(weight_3),
-		.weight_4(weight_4),
-		.weight_5(weight_5),
-		.weight_6(weight_6),
-		.weight_7(weight_7),
-		.weight_8(weight_8),
-		.fc_weight_0(fc_weight_0),
-		.fc_weight_1(fc_weight_1),
-		.fc_weight_2(fc_weight_2),
-		.fc_weight_3(fc_weight_3),
-		.fc_weight_4(fc_weight_4),
-		.fc_weight_5(fc_weight_5),
-		.fc_weight_6(fc_weight_6),
-		.fc_weight_7(fc_weight_7),
-		.fc_weight_8(fc_weight_8),
-		.fc_weight_9(fc_weight_9)
+		.data_f(data_f),
+		.weight_1_f(weight_1_f),
+		.weight_2_f(weight_2_f),
+		.weight_3_f(weight_3_f),
+		.weight_4_f(weight_4_f),
+		.weight_5_f(weight_5_f),
+		.weight_6_f(weight_6_f),
+		.weight_7_f(weight_7_f),
+		.weight_8_f(weight_8_f),
+		.fc_weight_0_f(fc_weight_0_f),
+		.fc_weight_1_f(fc_weight_1_f),
+		.fc_weight_2_f(fc_weight_2_f),
+		.fc_weight_3_f(fc_weight_3_f),
+		.fc_weight_4_f(fc_weight_4_f),
+		.fc_weight_5_f(fc_weight_5_f),
+		.fc_weight_6_f(fc_weight_6_f),
+		.fc_weight_7_f(fc_weight_7_f),
+		.fc_weight_8_f(fc_weight_8_f),
+		.fc_weight_9_f(fc_weight_9_f)
 	);
 
 // TODO: conv_enable control signal
@@ -158,25 +162,25 @@ module simpleCNN (
 	 	.clk(clk),
 	 	.rst(rst),
 	 	.conv_enable(conv_enable),
-	 	.data(data),
-	 	.weight_1(weight_1),
-	 	.weight_2(weight_2),
-	 	.weight_3(weight_3),
-	 	.weight_4(weight_4),
-	 	.weight_5(weight_5),
-	 	.weight_6(weight_6),
-	 	.weight_7(weight_7),
-	 	.weight_8(weight_8),
+	 	.data_f(data_f),
+	 	.weight_1_f(weight_1_f),
+	 	.weight_2_f(weight_2_f),
+	 	.weight_3_f(weight_3_f),
+	 	.weight_4_f(weight_4_f),
+	 	.weight_5_f(weight_5_f),
+	 	.weight_6_f(weight_6_f),
+	 	.weight_7_f(weight_7_f),
+	 	.weight_8_f(weight_8_f),
 
 		// OUTPUTS
-	 	.conv_result_1(conv_result_1),
-	 	.conv_result_2(conv_result_2),
-	 	.conv_result_3(conv_result_3),
-	 	.conv_result_4(conv_result_4),
-	 	.conv_result_5(conv_result_5),
-	 	.conv_result_6(conv_result_6),
-	 	.conv_result_7(conv_result_7),
-	 	.conv_result_8(conv_result_8),
+	 	.conv_result_1_f(conv_result_1_f),
+	 	.conv_result_2_f(conv_result_2_f),
+	 	.conv_result_3_f(conv_result_3_f),
+	 	.conv_result_4_f(conv_result_4_f),
+	 	.conv_result_5_f(conv_result_5_f),
+	 	.conv_result_6_f(conv_result_6_f),
+	 	.conv_result_7_f(conv_result_7_f),
+	 	.conv_result_8_f(conv_result_8_f),
 	 	.conv_done(conv_done)
 	);
 
@@ -185,24 +189,24 @@ module simpleCNN (
 		.clk(clk),
 	 	.rst(rst),
 		.relu_enable(conv_done),
-		.conv_result_1(conv_result_1),
-		.conv_result_2(conv_result_2),
-		.conv_result_3(conv_result_3),
-		.conv_result_4(conv_result_4),
-		.conv_result_5(conv_result_5),
-		.conv_result_6(conv_result_6),
-		.conv_result_7(conv_result_7),
-		.conv_result_8(conv_result_8),
+		.conv_result_1_f(conv_result_1_f),
+		.conv_result_2_f(conv_result_2_f),
+		.conv_result_3_f(conv_result_3_f),
+		.conv_result_4_f(conv_result_4_f),
+		.conv_result_5_f(conv_result_5_f),
+		.conv_result_6_f(conv_result_6_f),
+		.conv_result_7_f(conv_result_7_f),
+		.conv_result_8_f(conv_result_8_f),
 
 		// OUTPUTS
-		.relu_result_1(relu_result_1),
-		.relu_result_2(relu_result_2),
-		.relu_result_3(relu_result_3),
-		.relu_result_4(relu_result_4),
-		.relu_result_5(relu_result_5),
-		.relu_result_6(relu_result_6),
-		.relu_result_7(relu_result_7),
-		.relu_result_8(relu_result_8),
+		.relu_result_1_f(relu_result_1_f),
+		.relu_result_2_f(relu_result_2_f),
+		.relu_result_3_f(relu_result_3_f),
+		.relu_result_4_f(relu_result_4_f),
+		.relu_result_5_f(relu_result_5_f),
+		.relu_result_6_f(relu_result_6_f),
+		.relu_result_7_f(relu_result_7_f),
+		.relu_result_8_f(relu_result_8_f),
 		.relu_done(relu_done)
 	);
 
@@ -212,24 +216,24 @@ module simpleCNN (
 		.clk(clk),
 	 	.rst(rst),
 		.pool_enable(relu_done),
-		.relu_result_1(relu_result_1),
-		.relu_result_2(relu_result_2),
-		.relu_result_3(relu_result_3),
-		.relu_result_4(relu_result_4),
-		.relu_result_5(relu_result_5),
-		.relu_result_6(relu_result_6),
-		.relu_result_7(relu_result_7),
-		.relu_result_8(relu_result_8),
+		.relu_result_1_f(relu_result_1_f),
+		.relu_result_2_f(relu_result_2_f),
+		.relu_result_3_f(relu_result_3_f),
+		.relu_result_4_f(relu_result_4_f),
+		.relu_result_5_f(relu_result_5_f),
+		.relu_result_6_f(relu_result_6_f),
+		.relu_result_7_f(relu_result_7_f),
+		.relu_result_8_f(relu_result_8_f),
 
 		// OUTPUTS
-		.pool_result_1(pool_result_1),
-		.pool_result_2(pool_result_2),
-		.pool_result_3(pool_result_3),
-		.pool_result_4(pool_result_4),
-		.pool_result_5(pool_result_5),
-		.pool_result_6(pool_result_6),
-		.pool_result_7(pool_result_7),
-		.pool_result_8(pool_result_8),
+		.pool_result_1_f(pool_result_1_f),
+		.pool_result_2_f(pool_result_2_f),
+		.pool_result_3_f(pool_result_3_f),
+		.pool_result_4_f(pool_result_4_f),
+		.pool_result_5_f(pool_result_5_f),
+		.pool_result_6_f(pool_result_6_f),
+		.pool_result_7_f(pool_result_7_f),
+		.pool_result_8_f(pool_result_8_f),
 		.pool_done(pool_done)
 	);
 
@@ -239,24 +243,24 @@ module simpleCNN (
 			.clk(clk),
 		 	.rst(rst),
 			.fc_enable(pool_done),
-			.pool_result_1(pool_result_1),
-			.pool_result_2(pool_result_2),
-			.pool_result_3(pool_result_3),
-			.pool_result_4(pool_result_4),
-			.pool_result_5(pool_result_5),
-			.pool_result_6(pool_result_6),
-			.pool_result_7(pool_result_7),
-			.pool_result_8(pool_result_8),
-			.fc_weight_0(fc_weight_0),
-			.fc_weight_1(fc_weight_1),
-			.fc_weight_2(fc_weight_2),
-			.fc_weight_3(fc_weight_3),
-			.fc_weight_4(fc_weight_4),
-			.fc_weight_5(fc_weight_5),
-			.fc_weight_6(fc_weight_6),
-			.fc_weight_7(fc_weight_7),
-			.fc_weight_8(fc_weight_8),
-			.fc_weight_9(fc_weight_9),
+			.pool_result_1_f(pool_result_1_f),
+			.pool_result_2_f(pool_result_2_f),
+			.pool_result_3_f(pool_result_3_f),
+			.pool_result_4_f(pool_result_4_f),
+			.pool_result_5_f(pool_result_5_f),
+			.pool_result_6_f(pool_result_6_f),
+			.pool_result_7_f(pool_result_7_f),
+			.pool_result_8_f(pool_result_8_f),
+			.fc_weight_0_f(fc_weight_0_f),
+			.fc_weight_1_f(fc_weight_1_f),
+			.fc_weight_2_f(fc_weight_2_f),
+			.fc_weight_3_f(fc_weight_3_f),
+			.fc_weight_4_f(fc_weight_4_f),
+			.fc_weight_5_f(fc_weight_5_f),
+			.fc_weight_6_f(fc_weight_6_f),
+			.fc_weight_7_f(fc_weight_7_f),
+			.fc_weight_8_f(fc_weight_8_f),
+			.fc_weight_9_f(fc_weight_9_f),
 
 			// OUTPUTS
 			.prob_0(prob_0),
@@ -290,9 +294,9 @@ module simpleCNN (
 	end
 
 	integer i, j;
-	`ifndef DEBUG
-		reg signed [112:0] prob [9:0];
-	`endif
+	//`ifndef DEBUG
+		//reg signed [112:0] prob [9:0];
+	//`endif
 	reg signed [112:0] tmp_prob;
 	reg [3:0] next_result;
 	reg signed [112:0] max_prob;

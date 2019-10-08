@@ -13,27 +13,43 @@ module conv_layer (
 	input clk,    // Clock
 	input rst,  // Asynchronous reset active high
 	input conv_enable,
-	input signed [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0], // 28*28 8-bit data
-	input signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0],
-	input signed [`WEIGHT_SIZE-1:0] weight_2 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0],
-	input signed [`WEIGHT_SIZE-1:0] weight_3 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0],
-	input signed [`WEIGHT_SIZE-1:0] weight_4 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0],
-	input signed [`WEIGHT_SIZE-1:0] weight_5 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0],
-	input signed [`WEIGHT_SIZE-1:0] weight_6 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0],
-	input signed [`WEIGHT_SIZE-1:0] weight_7 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0],
-	input signed [`WEIGHT_SIZE-1:0] weight_8 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0],
-	output reg signed [`CONV_SIZE-1:0] conv_result_1 [`CONV_X-1:0][`CONV_Y-1:0],
-	output reg signed [`CONV_SIZE-1:0] conv_result_2 [`CONV_X-1:0][`CONV_Y-1:0],
-	output reg signed [`CONV_SIZE-1:0] conv_result_3 [`CONV_X-1:0][`CONV_Y-1:0],
-	output reg signed [`CONV_SIZE-1:0] conv_result_4 [`CONV_X-1:0][`CONV_Y-1:0],
-	output reg signed [`CONV_SIZE-1:0] conv_result_5 [`CONV_X-1:0][`CONV_Y-1:0],
-	output reg signed [`CONV_SIZE-1:0] conv_result_6 [`CONV_X-1:0][`CONV_Y-1:0],
-	output reg signed [`CONV_SIZE-1:0] conv_result_7 [`CONV_X-1:0][`CONV_Y-1:0],
-	output reg signed [`CONV_SIZE-1:0] conv_result_8 [`CONV_X-1:0][`CONV_Y-1:0],
+	input signed [25087:0] data_f,
+	input signed [799:0] weight_1_f,
+	input signed [799:0] weight_2_f,
+	input signed [799:0] weight_3_f,
+	input signed [799:0] weight_4_f,
+	input signed [799:0] weight_5_f,
+	input signed [799:0] weight_6_f,
+	input signed [799:0] weight_7_f,
+	input signed [799:0] weight_8_f,
+	output reg signed [39743:0] conv_result_1_f,
+	output reg signed [39743:0] conv_result_2_f,
+	output reg signed [39743:0] conv_result_3_f,
+	output reg signed [39743:0] conv_result_4_f,
+	output reg signed [39743:0] conv_result_5_f,
+	output reg signed [39743:0] conv_result_6_f,
+	output reg signed [39743:0] conv_result_7_f,
+	output reg signed [39743:0] conv_result_8_f,
 	output reg conv_done
 );
 
-	
+	reg signed [`DATA_SIZE-1:0] data [`DATA_X-1:0][`DATA_Y-1:0]; // 28*28 8-bit data
+	reg signed [`WEIGHT_SIZE-1:0] weight_1 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	reg signed [`WEIGHT_SIZE-1:0] weight_2 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	reg signed [`WEIGHT_SIZE-1:0] weight_3 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	reg signed [`WEIGHT_SIZE-1:0] weight_4 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	reg signed [`WEIGHT_SIZE-1:0] weight_5 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	reg signed [`WEIGHT_SIZE-1:0] weight_6 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	reg signed [`WEIGHT_SIZE-1:0] weight_7 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	reg signed [`WEIGHT_SIZE-1:0] weight_8 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	reg signed [`CONV_SIZE-1:0] conv_result_1 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg signed [`CONV_SIZE-1:0] conv_result_2 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg signed [`CONV_SIZE-1:0] conv_result_3 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg signed [`CONV_SIZE-1:0] conv_result_4 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg signed [`CONV_SIZE-1:0] conv_result_5 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg signed [`CONV_SIZE-1:0] conv_result_6 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg signed [`CONV_SIZE-1:0] conv_result_7 [`CONV_X-1:0][`CONV_Y-1:0];
+	reg signed [`CONV_SIZE-1:0] conv_result_8 [`CONV_X-1:0][`CONV_Y-1:0];
 
 	integer x;
 	integer y;
@@ -66,6 +82,38 @@ module conv_layer (
 	reg signed [`WEIGHT_SIZE-1:0] temp_6 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
 	reg signed [`WEIGHT_SIZE-1:0] temp_7 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
 	reg signed [`WEIGHT_SIZE-1:0] temp_8 [`WEIGHT_X-1:0][`WEIGHT_Y-1:0];
+	
+	always @ (*) begin
+		for (i = 0; i < 28; i = i+1) begin
+			for (j = 0; j < 28; j = i+1) begin
+				data[i][j] = data_f[896*i+32*j+:32];
+			end
+		end
+		for (i = 0; i < 5; i = i+1) begin
+			for (j = 0; j < 5; j = i+1) begin
+				weight_1[i][j] = weight_1_f[160*i+32*j+:32];
+				weight_2[i][j] = weight_2_f[160*i+32*j+:32];
+				weight_3[i][j] = weight_3_f[160*i+32*j+:32];
+				weight_4[i][j] = weight_4_f[160*i+32*j+:32];
+				weight_5[i][j] = weight_5_f[160*i+32*j+:32];
+				weight_6[i][j] = weight_6_f[160*i+32*j+:32];
+				weight_7[i][j] = weight_7_f[160*i+32*j+:32];
+				weight_8[i][j] = weight_8_f[160*i+32*j+:32];
+			end
+		end
+		for (i = 0; i < 24; i = i+1) begin
+			for (j = 0; j < 24; j = i+1) begin
+				conv_result_1_f[1656*i+69*j+:69] = conv_result_1[i][j];
+				conv_result_2_f[1656*i+69*j+:69] = conv_result_2[i][j];
+				conv_result_3_f[1656*i+69*j+:69] = conv_result_3[i][j];
+				conv_result_4_f[1656*i+69*j+:69] = conv_result_4[i][j];
+				conv_result_5_f[1656*i+69*j+:69] = conv_result_5[i][j];
+				conv_result_6_f[1656*i+69*j+:69] = conv_result_6[i][j];
+				conv_result_7_f[1656*i+69*j+:69] = conv_result_7[i][j];
+				conv_result_8_f[1656*i+69*j+:69] = conv_result_8[i][j];
+			end
+		end
+	end
 	
 	always @ (*) begin
 		for (x = 0; x < `CONV_X; x = x+1) begin

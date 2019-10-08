@@ -27,6 +27,8 @@ module simpleCNN_tb();
 	reg rst;
 	reg enable;
 	wire [3:0] result;
+	wire signed [112:0] prob [9:0];
+	/*
 	`ifdef DEBUG
 			wire signed [112:0] prob [9:0];
 			wire [31:0] data [27:0][27:0];
@@ -40,7 +42,7 @@ module simpleCNN_tb();
 			wire [68:0] pool_result_1 [11:0][11:0];
 			wire pool_done;
 	`endif
-
+	*/
 	integer i;
 	integer j;
 	
@@ -48,7 +50,9 @@ module simpleCNN_tb();
 		.clk(clk),
 		.rst(rst),
 		.enable(enable),
-		.result(result)
+		.result(result),
+		.prob(prob)
+		/*
 		`ifdef DEBUG
 			,.prob(prob)
 			,.weight_1(weight_1)
@@ -62,13 +66,14 @@ module simpleCNN_tb();
 			,.pool_result_1(pool_result_1)
 			,.pool_done(pool_done)
 		`endif
+		*/
 	);
 	
 	always begin
 		#5;
 		clk = ~clk;
 	end
-
+/*
 	task display_data;
 		$display("--------------- Display data---------------");
 		for (i = 0; i < 28; i = i+1) begin
@@ -118,7 +123,7 @@ module simpleCNN_tb();
 			end
 			$display("Pool_done: %d", pool_done);
 	endtask
-	
+	*/
 	initial begin
 		clk = 1'b0;
 		rst = 1'b1;
@@ -138,7 +143,7 @@ module simpleCNN_tb();
 		@(negedge clk);
 		@(negedge clk);
 		@(negedge clk);
-		display_data();
+		//display_data();
 		for (i = 0; i <= 9; i = i+1) begin
 			$display("%d", prob[i]);
 		end
