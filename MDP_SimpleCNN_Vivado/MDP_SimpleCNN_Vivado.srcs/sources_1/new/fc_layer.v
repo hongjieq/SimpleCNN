@@ -129,7 +129,7 @@ module fc_layer (
 				pool_result_8[i][j] = pool_result_8_f[828*i+69*j+:69];
 			end
 		end
-		for (i = 0; i < 1152; i++) begin
+		for (i = 0; i < 1152; i = i+1) begin
 			fc_weight_0[i] = fc_weight_0_f[i*32+:32];
 			fc_weight_1[i] = fc_weight_1_f[i*32+:32];
 			fc_weight_2[i] = fc_weight_2_f[i*32+:32];
