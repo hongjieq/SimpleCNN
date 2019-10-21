@@ -157,7 +157,7 @@ module read_data (
 				weight_8_f[160*i+32*j+:32] = weight_8[i][j];
 			end
 		end
-		for (i = 0; i < 1152; i++) begin
+		for (i = 0; i < 1152; i = i+1) begin
 			fc_weight_0_f[i*32+:32] = fc_weight_0[i];
 			fc_weight_1_f[i*32+:32] = fc_weight_1[i];
 			fc_weight_2_f[i*32+:32] = fc_weight_2[i];

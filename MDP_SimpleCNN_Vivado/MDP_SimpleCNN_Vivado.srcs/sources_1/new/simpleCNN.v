@@ -326,7 +326,7 @@ module simpleCNN (
 		*/
 		next_result = 0;
 		max_prob = prob[0];
-		for (i = 1; i < 10; i++) begin
+		for (i = 1; i < 10; i=i+1) begin
 			if (max_prob < prob[i]) begin
 				max_prob = prob[i];
 				next_result = i;
