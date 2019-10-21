@@ -22,7 +22,7 @@ module simpleCNN (
 	input wire rst,  	// Asynchronous reset active high
 	input wire enable,
 	output reg [3:0] result,
-	output reg signed [112:0] prob [9:0]
+	output reg signed [1129:0] prob_out
 	/*
 	`ifdef DEBUG
 		,output reg signed [112:0] prob [9:0]
@@ -39,7 +39,7 @@ module simpleCNN (
 	`endif
 	*/
 );
-
+	reg signed [112:0] prob [9:0];
 // read_data
   //`ifndef DEBUG	
 	wire signed [25087:0] data_f; // 28*28 32-bit data
@@ -333,6 +333,12 @@ module simpleCNN (
 			end
 		end
 		
+	end
+
+	always @(*) begin
+		for (i = 0; i < 10; i=i+1) begin
+			prob_out[i*113+:113] = prob[i];
+		end
 	end
 	/*
 	always @ (posedge clk) begin

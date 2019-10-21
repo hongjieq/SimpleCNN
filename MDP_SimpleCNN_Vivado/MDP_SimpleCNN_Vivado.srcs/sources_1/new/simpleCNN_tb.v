@@ -27,7 +27,7 @@ module simpleCNN_tb();
 	reg rst;
 	reg enable;
 	wire [3:0] result;
-	wire signed [112:0] prob [9:0];
+	wire signed [1129:0] prob_out;
 	/*
 	`ifdef DEBUG
 			wire signed [112:0] prob [9:0];
@@ -145,7 +145,7 @@ module simpleCNN_tb();
 		@(negedge clk);
 		//display_data();
 		for (i = 0; i <= 9; i = i+1) begin
-			$display("%d", prob[i]);
+			$display("%d", prob_out[i*113+112:i*113]);
 		end
 		$display("Digital identify: %d", result);
 		@(negedge clk);
