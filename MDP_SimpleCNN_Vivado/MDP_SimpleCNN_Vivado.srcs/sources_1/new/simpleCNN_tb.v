@@ -51,7 +51,7 @@ module simpleCNN_tb();
 		.rst(rst),
 		.enable(enable),
 		.result(result),
-		.prob(prob)
+		.prob_out(prob_out)
 		/*
 		`ifdef DEBUG
 			,.prob(prob)
@@ -145,7 +145,7 @@ module simpleCNN_tb();
 		@(negedge clk);
 		//display_data();
 		for (i = 0; i <= 9; i = i+1) begin
-			$display("%d", prob_out[i*113+112:i*113]);
+			//$display("%d", prob_out[i*113+112:i*113]);
 		end
 		$display("Digital identify: %d", result);
 		@(negedge clk);

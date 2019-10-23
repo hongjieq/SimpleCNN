@@ -31,7 +31,7 @@ module read_data (
 	integer count_conv_weight;
 	integer count_fc_weight;
 	
-	reg signed [31:0] data [27:0][27:0];
+	reg signed [31:0] data [0:27][0:27];
 	reg signed [31:0] weight_1 [4:0][4:0];
 	reg signed [31:0] weight_2 [4:0][4:0];
 	reg signed [31:0] weight_3 [4:0][4:0];
@@ -50,19 +50,49 @@ module read_data (
 	reg signed [31:0] fc_weight_7 [1151:0];
 	reg signed [31:0] fc_weight_8 [1151:0];
 	reg signed [31:0] fc_weight_9 [1151:0];
+	reg signed [799:0] weight [0:7];
+	reg signed [36863:0] fc_weight [0:9];
+	
+    //reg [31:0] test_2s_compliment_test [0:27][0:27];
+    always @* begin
+      weight[0] = weight_1_f;
+	  weight[1] = weight_2_f;
+	  weight[2] = weight_3_f;
+	  weight[3] = weight_4_f;
+	  weight[4] = weight_5_f;
+	  weight[5] = weight_6_f;
+	  weight[6] = weight_7_f;
+	  weight[7] = weight_8_f;
+	  fc_weight[0] = fc_weight_0_f;
+	  fc_weight[1] = fc_weight_1_f;
+	  fc_weight[2] = fc_weight_2_f;
+	  fc_weight[3] = fc_weight_3_f;
+	  fc_weight[4] = fc_weight_4_f;
+	  fc_weight[5] = fc_weight_5_f;
+	  fc_weight[6] = fc_weight_6_f;
+	  fc_weight[7] = fc_weight_7_f;
+	  fc_weight[8] = fc_weight_8_f;
+	  fc_weight[9] = fc_weight_9_f;
+	end
 	
 	initial begin
 		// read data
-		file0 = $fopen("test_2s_compliment.txt","r");
-		for (i = 0; i < 28; i = i+1) begin
+		//file0 = $fopen("C:\Users\Hannah\Desktop\MDP_CNN_Verilog\SimpleCNN\MDP_SimpleCNN_Vivado\MDP_SimpleCNN_Vivado.sim\sim_1\behav\xsim\test_2s_compliment.txt","rb");
+		$readmemb("test_2s_compliment.txt.txt", data);
+		/*for (i = 0; i < 28; i = i+1) begin
 			for (j = 0; j < 28; j = j+1) begin
 				count_data = $fscanf(file0, "%b", data[i][j]);
+				
+
+                
 			end
-		end
+		end*/
 		// read conv weight
 		// initial $readmemb("test2.txt", imageArray, 0, 27); //reading image
-		file1 = $fopen("conv_weights_out_2s_comp.txt","r");
+		//file1 = $fopen("C:\Users\Hannah\Desktop\MDP_CNN_Verilog\SimpleCNN\MDP_SimpleCNN_Vivado\MDP_SimpleCNN_Vivado.sim\sim_1\behav\xsim\conv_weights_out_2s_comp.txt","rb");
+		$readmemb("conv_weights_out_2s_comp.txt.txt", weight);
 		//while (! $feof(file1)) begin
+		/*
 		for (i = 0; i < 5; i = i+1) begin
 			for (j = 0; j < 5; j = j+1) begin
 				count_conv_weight = $fscanf(file1, "%b", weight_1[i][j]);
@@ -103,10 +133,13 @@ module read_data (
 				count_conv_weight = $fscanf(file1, "%b", weight_8[i][j]);
 			end
 		end
+		*/
 		//end
 		
 		// Read fc weight
-		file2 = $fopen("fc_weights_out_2s_comp.txt","r");
+		$readmemb("fc_weights_out_2s_comp.txt.txt", fc_weight);
+		/*
+		file2 = $fopen("C:\Users\Hannah\Desktop\MDP_CNN_Verilog\SimpleCNN\MDP_SimpleCNN_Vivado\MDP_SimpleCNN_Vivado.sim\sim_1\behav\xsim\fc_weights_out_2s_comp.txt","rb");
 		for (m = 0; m < 1152; m = m+1) begin
 			count_fc_weight = $fscanf(file2, "%b", fc_weight_0[m]);
 		end
@@ -136,7 +169,7 @@ module read_data (
 		end
 		for (m = 0; m < 1152; m = m+1) begin
 			count_fc_weight = $fscanf(file2, "%b", fc_weight_9[m]);
-		end
+		end*/
 	end
 		
 	always @(*) begin
@@ -145,6 +178,7 @@ module read_data (
 				data_f[896*i+32*j+:32] = data[i][j];
 			end
 		end
+		/*
 		for (i = 0; i < 5; i = i+1) begin
 			for (j = 0; j < 5; j = i+1) begin
 				weight_1_f[160*i+32*j+:32] = weight_1[i][j];
@@ -157,6 +191,8 @@ module read_data (
 				weight_8_f[160*i+32*j+:32] = weight_8[i][j];
 			end
 		end
+		*/
+		/*
 		for (i = 0; i < 1152; i = i+1) begin
 			fc_weight_0_f[i*32+:32] = fc_weight_0[i];
 			fc_weight_1_f[i*32+:32] = fc_weight_1[i];
@@ -169,6 +205,7 @@ module read_data (
 			fc_weight_8_f[i*32+:32] = fc_weight_8[i];
 			fc_weight_9_f[i*32+:32] = fc_weight_9[i];
 		end
+		*/
 	end
 
 endmodule
