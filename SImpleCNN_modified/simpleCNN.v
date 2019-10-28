@@ -24,7 +24,6 @@ module simpleCNN (
 	output reg [3:0] result,
 	output reg [15:0] count,
 	output reg signed [112:0] prob_0,
-	output reg signed [112:0] prob_0,
 	output reg signed [112:0] prob_1,
 	output reg signed [112:0] prob_2,
 	output reg signed [112:0] prob_3,
@@ -37,6 +36,7 @@ module simpleCNN (
 	output reg fc_done
 );
 	reg signed [112:0] prob [9:0];
+	integer i,j;
 // conv_layer
 	wire signed [68:0] conv_result_1;
 	wire signed [68:0] conv_result_2;
@@ -93,63 +93,63 @@ module simpleCNN (
 	reg signed [68:0] relu_7 [23:0][23:0];
 	reg signed [68:0] relu_8 [23:0][23:0];
 	reg signed [68:0] pool [7:0][143:0];
-	wire signed [31:0] data_00;
-	wire signed [31:0] data_01;
-	wire signed [31:0] data_02;
-	wire signed [31:0] data_03;
-	wire signed [31:0] data_04;
-	wire signed [31:0] data_10;
-	wire signed [31:0] data_11;
-	wire signed [31:0] data_12;
-	wire signed [31:0] data_13;
-	wire signed [31:0] data_14;
-	wire signed [31:0] data_20;
-	wire signed [31:0] data_21;
-	wire signed [31:0] data_22;
-	wire signed [31:0] data_23;
-	wire signed [31:0] data_24;
-	wire signed [31:0] data_30;
-	wire signed [31:0] data_31;
-	wire signed [31:0] data_32;
-	wire signed [31:0] data_33;
-	wire signed [31:0] data_34;
-	wire signed [31:0] data_40;
-	wire signed [31:0] data_41;
-	wire signed [31:0] data_42;
-	wire signed [31:0] data_43;
-	wire signed [31:0] data_44;
-	wire signed [68:0] pool_0_00;
-	wire signed [68:0] pool_0_01;
-	wire signed [68:0] pool_0_10;
-	wire signed [68:0] pool_0_11;
-	wire signed [68:0] pool_1_00;
-	wire signed [68:0] pool_1_01;
-	wire signed [68:0] pool_1_10;
-	wire signed [68:0] pool_1_11;
-	wire signed [68:0] pool_2_00;
-	wire signed [68:0] pool_2_01;
-	wire signed [68:0] pool_2_10;
-	wire signed [68:0] pool_2_11;
-	wire signed [68:0] pool_3_00;
-	wire signed [68:0] pool_3_01;
-	wire signed [68:0] pool_3_10;
-	wire signed [68:0] pool_3_11;
-	wire signed [68:0] pool_4_00;
-	wire signed [68:0] pool_4_01;
-	wire signed [68:0] pool_4_10;
-	wire signed [68:0] pool_4_11;
-	wire signed [68:0] pool_5_00;
-	wire signed [68:0] pool_5_01;
-	wire signed [68:0] pool_5_10;
-	wire signed [68:0] pool_5_11;
-	wire signed [68:0] pool_6_00;
-	wire signed [68:0] pool_6_01;
-	wire signed [68:0] pool_6_10;
-	wire signed [68:0] pool_6_11;
-	wire signed [68:0] pool_7_00;
-	wire signed [68:0] pool_7_01;
-	wire signed [68:0] pool_7_10;
-	wire signed [68:0] pool_7_11;
+	reg signed [31:0] data_00;
+	reg signed [31:0] data_01;
+	reg signed [31:0] data_02;
+	reg signed [31:0] data_03;
+	reg signed [31:0] data_04;
+	reg signed [31:0] data_10;
+	reg signed [31:0] data_11;
+	reg signed [31:0] data_12;
+	reg signed [31:0] data_13;
+	reg signed [31:0] data_14;
+	reg signed [31:0] data_20;
+	reg signed [31:0] data_21;
+	reg signed [31:0] data_22;
+	reg signed [31:0] data_23;
+	reg signed [31:0] data_24;
+	reg signed [31:0] data_30;
+	reg signed [31:0] data_31;
+	reg signed [31:0] data_32;
+	reg signed [31:0] data_33;
+	reg signed [31:0] data_34;
+	reg signed [31:0] data_40;
+	reg signed [31:0] data_41;
+	reg signed [31:0] data_42;
+	reg signed [31:0] data_43;
+	reg signed [31:0] data_44;
+	reg signed [68:0] pool_0_00;
+	reg signed [68:0] pool_0_01;
+	reg signed [68:0] pool_0_10;
+	reg signed [68:0] pool_0_11;
+	reg signed [68:0] pool_1_00;
+	reg signed [68:0] pool_1_01;
+	reg signed [68:0] pool_1_10;
+	reg signed [68:0] pool_1_11;
+	reg signed [68:0] pool_2_00;
+	reg signed [68:0] pool_2_01;
+	reg signed [68:0] pool_2_10;
+	reg signed [68:0] pool_2_11;
+	reg signed [68:0] pool_3_00;
+	reg signed [68:0] pool_3_01;
+	reg signed [68:0] pool_3_10;
+	reg signed [68:0] pool_3_11;
+	reg signed [68:0] pool_4_00;
+	reg signed [68:0] pool_4_01;
+	reg signed [68:0] pool_4_10;
+	reg signed [68:0] pool_4_11;
+	reg signed [68:0] pool_5_00;
+	reg signed [68:0] pool_5_01;
+	reg signed [68:0] pool_5_10;
+	reg signed [68:0] pool_5_11;
+	reg signed [68:0] pool_6_00;
+	reg signed [68:0] pool_6_01;
+	reg signed [68:0] pool_6_10;
+	reg signed [68:0] pool_6_11;
+	reg signed [68:0] pool_7_00;
+	reg signed [68:0] pool_7_01;
+	reg signed [68:0] pool_7_10;
+	reg signed [68:0] pool_7_11;
 
 	initial begin
 		$readmemb("test_2s_compliment.txt.txt", data);
@@ -338,7 +338,7 @@ module simpleCNN (
 	 	.conv_result_8(conv_result_8)
 	);
 
-	relu_layer relu(
+	relu_layer relu_l(
 		// INPUTS
 		.clk(clk),
 	 	.rst(rst),
@@ -362,7 +362,7 @@ module simpleCNN (
 	);
 
 // pool_layer
-	pool_layer pool(
+	pool_layer pool_l(
 		// INPUTS
 		.clk(clk),
 	 	.rst(rst),
@@ -480,7 +480,6 @@ module simpleCNN (
 		in_prob_9 = prob_9;
 	end
 
-	integer i, j;
 	reg signed [112:0] tmp_prob;
 	reg [3:0] next_result;
 	reg signed [112:0] max_prob;

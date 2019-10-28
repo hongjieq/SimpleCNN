@@ -67,7 +67,7 @@ module simpleCNN_tb();
 	end
 
 	initial begin
-		f0 = $fopen('output.txt','w');
+		f0 = $fopen("test.txt","w");
 	end
 
 	initial begin
@@ -89,21 +89,22 @@ module simpleCNN_tb();
 		@(negedge clk);
 		repeat (1000) begin
 			@(negedge clk);
-			$fwrite(f0, '%d		', count);
-			$fwrite(f0, '%d		', result);
-			$fwrite(f0, '%d		', prob_0);
-			$fwrite(f0, '%d		', prob_1);
-			$fwrite(f0, '%d		', prob_2);
-			$fwrite(f0, '%d		', prob_3);
-			$fwrite(f0, '%d		', prob_4);
-			$fwrite(f0, '%d		', prob_5);
-			$fwrite(f0, '%d		', prob_6);
-			$fwrite(f0, '%d		', prob_7);
-			$fwrite(f0, '%d		', prob_8);
-			$fwrite(f0, '%d		', prob_9);
-			$fwrite(f0, '\n');
+			$fwrite(f0, "%d		", count);
+			$fwrite(f0, "%d		", result);
+			$fwrite(f0, "%d		", prob_0);
+			$fwrite(f0, "%d		", prob_1);
+			$fwrite(f0, "%d		", prob_2);
+			$fwrite(f0, "%d		", prob_3);
+			$fwrite(f0, "%d		", prob_4);
+			$fwrite(f0, "%d		", prob_5);
+			$fwrite(f0, "%d		", prob_6);
+			$fwrite(f0, "%d		", prob_7);
+			$fwrite(f0, "%d		", prob_8);
+			$fwrite(f0, "%d		", prob_9);
+			$fwrite(f0, "\n");
 		end
 		@(negedge clk);
+		$fclose(f0);
 		$finish;
 
 	end

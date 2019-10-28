@@ -81,6 +81,7 @@ module pool_layer(
 	reg signed [112:0] fc_weight [9:0][1151:0];
 	reg pool_done;
 	integer i,j;
+	reg [10:0] count;
 
 	initial begin
 		$readmemb("fc_weights_out_2s_comp.txt.txt", fc_weight_read);
