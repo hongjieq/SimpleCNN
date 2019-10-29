@@ -65,11 +65,11 @@ module simpleCNN_tb();
 		#5;
 		clk = ~clk;
 	end
-
+/*
 	initial begin
 		f0 = $fopen("test.txt","w");
 	end
-
+*/
 	initial begin
 		clk = 1'b0;
 		rst = 1'b1;
@@ -87,6 +87,8 @@ module simpleCNN_tb();
 		@(negedge clk);
 		@(negedge clk);
 		@(negedge clk);
+		repeat (1000) @(negedge clk);
+		/*
 		repeat (1000) begin
 			@(negedge clk);
 			$fwrite(f0, "%d		", count);
@@ -105,7 +107,8 @@ module simpleCNN_tb();
 		end
 		@(negedge clk);
 		$fclose(f0);
-		$finish;
+		*/
+		//$finish;
 
 	end
 

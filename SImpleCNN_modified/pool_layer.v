@@ -77,24 +77,33 @@ module pool_layer(
 	reg signed [68:0] next_pool_result_8;
 	reg signed [68:0] temp [7:0];
 	reg signed [68:0] pool [1151:0];
-	reg signed [31:0] fc_weight_read [9:0][1151:0];
-	reg signed [112:0] fc_weight [9:0][1151:0];
+	reg signed [31:0] fc_weight_read_1 [4:0][1151:0];
+	reg signed [31:0] fc_weight_read_2 [4:0][1151:0];
+	reg signed [112:0] fc_weight_1 [4:0][1151:0];
+	reg signed [112:0] fc_weight_2 [4:0][1151:0];
 	reg pool_done;
 	integer i,j;
 	reg [10:0] count;
 
 	initial begin
-		$readmemb("fc_weights_out_2s_comp.txt.txt", fc_weight_read);
+		$readmemb("fc_weights_out_2s_comp_1.txt.txt", fc_weight_read_1);
+		$readmemb("fc_weights_out_2s_comp_2.txt.txt", fc_weight_read_2);
 	end
 
 	// weight sign extend
 	always @(*) begin
-		for (i = 0; i < 10; i=i+1) begin
+		for (i = 0; i < 5; i=i+1) begin
 			for (j = 0; j < 1152; j=j+1) begin
-				fc_weight[i][j][31:0] = fc_weight_read[i][j];
-				fc_weight[i][j][112:32] = {81{fc_weight_read[i][j][31]}};
+				fc_weight_1[i][j][31:0] = fc_weight_read_1[i][j];
+				fc_weight_1[i][j][112:32] = {81{fc_weight_read_1[i][j][31]}};
 			end
 		end
+		for (i = 0; i < 5; i=i+1) begin
+                    for (j = 0; j < 1152; j=j+1) begin
+                        fc_weight_2[i][j][31:0] = fc_weight_read_2[i][j];
+                        fc_weight_2[i][j][112:32] = {81{fc_weight_read_2[i][j][31]}};
+                    end
+                end
 	end
 
 	always @(*) begin
@@ -185,16 +194,16 @@ module pool_layer(
 			prob_8 <= 0;
 			prob_9 <= 0;
 		end else if (pool_done && count < 1152) begin
-			prob_0 <= prob_0 + fc_weight[0][count] * pool[count];
-			prob_1 <= prob_1 + fc_weight[1][count] * pool[count];
-			prob_2 <= prob_2 + fc_weight[2][count] * pool[count];
-			prob_3 <= prob_3 + fc_weight[3][count] * pool[count];
-			prob_4 <= prob_4 + fc_weight[4][count] * pool[count];
-			prob_5 <= prob_5 + fc_weight[5][count] * pool[count];
-			prob_6 <= prob_6 + fc_weight[6][count] * pool[count];
-			prob_7 <= prob_7 + fc_weight[7][count] * pool[count];
-			prob_8 <= prob_8 + fc_weight[8][count] * pool[count];
-			prob_9 <= prob_9 + fc_weight[9][count] * pool[count];
+			prob_0 <= prob_0 + fc_weight_1[0][count] * pool[count];
+			prob_1 <= prob_1 + fc_weight_1[1][count] * pool[count];
+			prob_2 <= prob_2 + fc_weight_1[2][count] * pool[count];
+			prob_3 <= prob_3 + fc_weight_1[3][count] * pool[count];
+			prob_4 <= prob_4 + fc_weight_1[4][count] * pool[count];
+			prob_5 <= prob_5 + fc_weight_2[0][count] * pool[count];
+			prob_6 <= prob_6 + fc_weight_2[1][count] * pool[count];
+			prob_7 <= prob_7 + fc_weight_2[2][count] * pool[count];
+			prob_8 <= prob_8 + fc_weight_2[3][count] * pool[count];
+			prob_9 <= prob_9 + fc_weight_2[4][count] * pool[count];
 		end
 	end
 

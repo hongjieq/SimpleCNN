@@ -23,7 +23,7 @@ module read_data (
 	output reg signed [36863:0] fc_weight_8_f,
 	output reg signed [36863:0] fc_weight_9_f
 );
-	integer i;
+	integer i, j;
 	/*
 	integer j;
 	integer m;
@@ -90,7 +90,7 @@ module read_data (
 		
 	always @(*) begin
 		for (i = 0; i < 28; i = i+1) begin
-			for (j = 0; j < 28; j = i+1) begin
+			for (j = 0; j < 28; j = j+1) begin
 				data_f[896*i+32*j+:32] = data[i][j];
 			end
 		end

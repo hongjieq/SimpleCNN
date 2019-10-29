@@ -1,0 +1,10 @@
+Exception at PC 0x00007FF90131C95C
+Attemped to write at address 0x0000000000000000
+Printing stacktrace...
+
+[0] (memset+0x18c) [0x00007FF90131C95C]
+[1] (memset+0x18c) [0x00007FF90131C95C]
+[2] (iki_calloca8+0x21) [0x00007FF8E8B39421]
+[3] (iki_vlog_get_array_select_value+0x197) [0x00007FF8E8B17837]
+[4]  [0x0000000000402120]
+Done

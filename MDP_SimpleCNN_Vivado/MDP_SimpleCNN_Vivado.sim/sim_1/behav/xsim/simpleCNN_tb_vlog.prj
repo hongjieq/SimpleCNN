@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../MDP_SimpleCNN_Vivado.srcs/sources_1/new/conv_layer.v" \
+"../../../../MDP_SimpleCNN_Vivado.srcs/sources_1/new/fc_layer.v" \
+"../../../../MDP_SimpleCNN_Vivado.srcs/sources_1/new/pool_layer.v" \
+"../../../../MDP_SimpleCNN_Vivado.srcs/sources_1/new/read_data.v" \
+"../../../../MDP_SimpleCNN_Vivado.srcs/sources_1/new/relu_layer.v" \
+"../../../../MDP_SimpleCNN_Vivado.srcs/sources_1/new/simpleCNN.v" \
+"../../../../MDP_SimpleCNN_Vivado.srcs/sources_1/new/simpleCNN_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

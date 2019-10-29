@@ -1,0 +1,163 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Oct 28 14:30:53 2019
+# Process ID: 17468
+# Current directory: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1
+# Command line: vivado.exe -log simpleCNN_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simpleCNN_tb.tcl
+# Log file: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1/simpleCNN_tb.vds
+# Journal file: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source simpleCNN_tb.tcl -notrace
+Command: synth_design -top simpleCNN_tb -part xc7z045ffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8044 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 409.934 ; gain = 99.227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'simpleCNN_tb' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:22]
+INFO: [Synth 8-6157] synthesizing module 'simpleCNN' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:20]
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:155]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:13]
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:64]
+WARNING: [Synth 8-3848] Net weight_read[0][0] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][1] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][2] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][3] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][4] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][5] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][6] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][7] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][8] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][9] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][10] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][11] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][12] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][13] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][14] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][15] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][16] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][17] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][18] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][19] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][20] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][21] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][22] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][23] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[0][24] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][0] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][1] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][2] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][3] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][4] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][5] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][6] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][7] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][8] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][9] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][10] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][11] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][12] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][13] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][14] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][15] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][16] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][17] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][18] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][19] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][20] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][21] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][22] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][23] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[1][24] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][0] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][1] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][2] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][3] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][4] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][5] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][6] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][7] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][8] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][9] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][10] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][11] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][12] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][13] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][14] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][15] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][16] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][17] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][18] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][19] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][20] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][21] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][22] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][23] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[2][24] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][0] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][1] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][2] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][3] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][4] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][5] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][6] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][7] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][8] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][9] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][10] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][11] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][12] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][13] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][14] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][15] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][16] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][17] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][18] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][19] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][20] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][21] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][22] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][23] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+WARNING: [Synth 8-3848] Net weight_read[3][24] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:52]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer' (1#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:13]
+INFO: [Synth 8-6157] synthesizing module 'relu_layer' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/relu_layer.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'relu_layer' (2#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/relu_layer.v:7]
+INFO: [Synth 8-6157] synthesizing module 'pool_layer' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:10]
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:89]
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'pool_layer' (3#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:10]
+WARNING: [Synth 8-567] referenced signal 'prob_0' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_1' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_2' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_3' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_4' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_5' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_6' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_7' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_8' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+WARNING: [Synth 8-567] referenced signal 'prob_9' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:470]
+INFO: [Synth 8-6155] done synthesizing module 'simpleCNN' (4#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:20]
+WARNING: [Synth 8-85] always block has no event control specified [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'simpleCNN_tb' (5#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:22]
+WARNING: [Synth 8-3331] design simpleCNN has unconnected port enable
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:01:36 ; elapsed = 00:01:38 . Memory (MB): peak = 1611.375 ; gain = 1300.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:43 ; elapsed = 00:01:46 . Memory (MB): peak = 1611.375 ; gain = 1300.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:43 ; elapsed = 00:01:46 . Memory (MB): peak = 1611.375 ; gain = 1300.668
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z045ffg900-2

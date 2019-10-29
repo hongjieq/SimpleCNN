@@ -23,17 +23,17 @@ module simpleCNN (
 	input wire enable,
 	output reg [3:0] result,
 	output reg [15:0] count,
-	output reg signed [112:0] prob_0,
-	output reg signed [112:0] prob_1,
-	output reg signed [112:0] prob_2,
-	output reg signed [112:0] prob_3,
-	output reg signed [112:0] prob_4,
-	output reg signed [112:0] prob_5,
-	output reg signed [112:0] prob_6,
-	output reg signed [112:0] prob_7,
-	output reg signed [112:0] prob_8,
-	output reg signed [112:0] prob_9,
-	output reg fc_done
+	output wire signed [112:0] prob_0,
+	output wire signed [112:0] prob_1,
+	output wire signed [112:0] prob_2,
+	output wire signed [112:0] prob_3,
+	output wire signed [112:0] prob_4,
+	output wire signed [112:0] prob_5,
+	output wire signed [112:0] prob_6,
+	output wire signed [112:0] prob_7,
+	output wire signed [112:0] prob_8,
+	output wire signed [112:0] prob_9,
+	output wire fc_done
 );
 	reg signed [112:0] prob [9:0];
 	integer i,j;
