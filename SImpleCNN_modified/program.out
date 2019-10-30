@@ -1,0 +1,9 @@
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version N-2017.12-SP2-1_Full64; Runtime version N-2017.12-SP2-1_Full64;  Oct 30 15:51 2019
+$finish called from file "simpleCNN_tb.v", line 179.
+$finish at simulation time             10030000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 10030000 ps
+CPU Time:      0.340 seconds;       Data structure size:   0.9Mb
+Wed Oct 30 15:51:14 2019
