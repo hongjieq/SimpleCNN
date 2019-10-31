@@ -23,6 +23,32 @@ module simpleCNN (
 	input wire enable,
 	output reg [3:0] result,
 	output reg [15:0] count,
+	output wire signed [68:0] conv_result_1,
+	output wire signed [68:0] conv_result_2,
+	output wire signed [68:0] conv_result_3,
+	output wire signed [68:0] conv_result_4,
+	output wire signed [68:0] conv_result_5,
+	output wire signed [68:0] conv_result_6,
+	output wire signed [68:0] conv_result_7,
+	output wire signed [68:0] conv_result_8,
+// relu_layer
+	output wire signed [68:0] relu_result_1,
+	output wire signed [68:0] relu_result_2,
+	output wire signed [68:0] relu_result_3,
+	output wire signed [68:0] relu_result_4,
+	output wire signed [68:0] relu_result_5,
+	output wire signed [68:0] relu_result_6,
+	output wire signed [68:0] relu_result_7,
+	output wire signed [68:0] relu_result_8,
+// pool_layer
+	output wire signed [68:0] pool_result_1,
+	output wire signed [68:0] pool_result_2,
+	output wire signed [68:0] pool_result_3,
+	output wire signed [68:0] pool_result_4,
+	output wire signed [68:0] pool_result_5,
+	output wire signed [68:0] pool_result_6,
+	output wire signed [68:0] pool_result_7,
+	output wire signed [68:0] pool_result_8,
 	output wire signed [112:0] prob_0,
 	output wire signed [112:0] prob_1,
 	output wire signed [112:0] prob_2,
@@ -37,6 +63,7 @@ module simpleCNN (
 );
 	reg signed [112:0] prob [9:0];
 	integer i,j;
+	/*
 // conv_layer
 	wire signed [68:0] conv_result_1;
 	wire signed [68:0] conv_result_2;
@@ -65,6 +92,7 @@ module simpleCNN (
 	wire signed [68:0] pool_result_7;
 	wire signed [68:0] pool_result_8;
 // fc_layer
+*/
 /*
 	wire signed [112:0] prob_0;
 	wire signed [112:0] prob_1;
@@ -401,7 +429,7 @@ module simpleCNN (
 		.pool_7_10 (pool_7_10),
 		.pool_7_11 (pool_7_11),
 		// OUTPUTS
-		/*
+		
 		.pool_result_1(pool_result_1),
 		.pool_result_2(pool_result_2),
 		.pool_result_3(pool_result_3),
@@ -409,8 +437,7 @@ module simpleCNN (
 		.pool_result_5(pool_result_5),
 		.pool_result_6(pool_result_6),
 		.pool_result_7(pool_result_7),
-		.pool_result_8(pool_result_8)
-		*/
+		.pool_result_8(pool_result_8),
 		.prob_0(prob_0),
 		.prob_1(prob_1),
 		.prob_2(prob_2),

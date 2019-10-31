@@ -44,7 +44,6 @@ module pool_layer(
 	input signed [68:0] pool_7_01,
 	input signed [68:0] pool_7_10,
 	input signed [68:0] pool_7_11,
-	/*
 	output reg signed [68:0] pool_result_1,
 	output reg signed [68:0] pool_result_2,
 	output reg signed [68:0] pool_result_3,
@@ -52,8 +51,7 @@ module pool_layer(
 	output reg signed [68:0] pool_result_5,
 	output reg signed [68:0] pool_result_6,
 	output reg signed [68:0] pool_result_7,
-	output reg signed [68:0] pool_result_8
-	*/
+	output reg signed [68:0] pool_result_8,
 	output reg signed [112:0] prob_0,
 	output reg signed [112:0] prob_1,
 	output reg signed [112:0] prob_2,
@@ -224,7 +222,7 @@ module pool_layer(
 			else if (count == 1152) fc_done <= 1'b1;
 		end
 	end
-	/*
+	
 	always @ (posedge clk) begin
 		if (rst) begin
 			pool_result_1 <= 0;
@@ -246,6 +244,6 @@ module pool_layer(
 			pool_result_8 <= next_pool_result_8;
 		end
 	end
-	*/
+	
 
 endmodule
