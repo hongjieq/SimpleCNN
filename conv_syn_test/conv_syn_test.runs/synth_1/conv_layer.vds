@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Oct 30 14:51:49 2019
-# Process ID: 29072
+# Start of session at: Sun Nov  3 13:19:50 2019
+# Process ID: 39996
 # Current directory: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_syn_test/conv_syn_test.runs/synth_1
 # Command line: vivado.exe -log conv_layer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_layer.tcl
 # Log file: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_syn_test/conv_syn_test.runs/synth_1/conv_layer.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 27728 
+INFO: Helper process launched with PID 21748 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 409.492 ; gain = 96.820
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 409.320 ; gain = 97.773
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'conv_layer' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_layer.v:13]
 WARNING: [Synth 8-3848] Net weight_read[0][0] in module/entity conv_layer does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_layer.v:52]
@@ -123,21 +123,58 @@ WARNING: [Synth 8-3848] Net weight_read[3][24] in module/entity conv_layer does 
 INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'conv_layer' (1#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_layer.v:13]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 473.480 ; gain = 160.809
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 473.105 ; gain = 161.559
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 473.480 ; gain = 160.809
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 473.105 ; gain = 161.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 473.105 ; gain = 161.559
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_syn_test/conv_syn_test.srcs/constrs_1/new/run1.xdc]
+Finished Parsing XDC File [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_syn_test/conv_syn_test.srcs/constrs_1/new/run1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_syn_test/conv_syn_test.srcs/constrs_1/new/run1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/conv_layer_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/conv_layer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 911.203 ; gain = 1.668
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045ffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 473.480 ; gain = 160.809
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z045ffg900-2
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 473.480 ; gain = 160.809
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 911.203 ; gain = 599.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -147,7 +184,6 @@ Report RTL Partitions:
 |1     |conv_layer__GB0 |           1|     26388|
 |2     |conv_layer__GB1 |           1|     25836|
 +------+----------------+------------+----------+
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -185,7 +221,6 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
@@ -264,7 +299,7 @@ INFO: [Synth 8-3886] merging instance 'i_0/conv_result_1_reg[64]' (FDR) to 'i_0/
 INFO: [Synth 8-3886] merging instance 'i_0/conv_result_1_reg[65]' (FDR) to 'i_0/conv_result_1_reg[68]'
 INFO: [Synth 8-3886] merging instance 'i_0/conv_result_1_reg[66]' (FDR) to 'i_0/conv_result_1_reg[68]'
 INFO: [Synth 8-3886] merging instance 'i_0/conv_result_1_reg[67]' (FDR) to 'i_0/conv_result_1_reg[68]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conv_result_1_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\conv_result_1_reg[68] )
 INFO: [Synth 8-3886] merging instance 'i_0/conv_result_5_reg[0]' (FDR) to 'i_0/conv_result_6_reg[0]'
 INFO: [Synth 8-3886] merging instance 'i_0/conv_result_5_reg[1]' (FDR) to 'i_0/conv_result_6_reg[0]'
 INFO: [Synth 8-3886] merging instance 'i_0/conv_result_5_reg[2]' (FDR) to 'i_0/conv_result_6_reg[0]'
@@ -298,9 +333,9 @@ INFO: [Synth 8-3886] merging instance 'i_0/conv_result_5_reg[29]' (FDR) to 'i_0/
 INFO: [Synth 8-3886] merging instance 'i_0/conv_result_5_reg[30]' (FDR) to 'i_0/conv_result_6_reg[0]'
 INFO: [Synth 8-3886] merging instance 'i_0/conv_result_5_reg[31]' (FDR) to 'i_0/conv_result_6_reg[0]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conv_result_3_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\conv_result_3_reg[68] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -308,12 +343,17 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 911.203 ; gain = 599.656
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -325,7 +365,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -349,7 +389,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -362,7 +402,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -374,25 +414,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -418,11 +458,11 @@ Report Instance Areas:
 |1     |top      |       |   552|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 911.203 ; gain = 599.656
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 202 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 680.578 ; gain = 367.906
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 911.203 ; gain = 161.559
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 911.203 ; gain = 599.656
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -430,11 +470,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-116 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+119 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 789.457 ; gain = 489.422
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 911.203 ; gain = 612.480
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_syn_test/conv_syn_test.runs/synth_1/conv_layer.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file conv_layer_utilization_synth.rpt -pb conv_layer_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.194 . Memory (MB): peak = 789.457 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 30 14:52:09 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 911.203 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 13:20:26 2019...

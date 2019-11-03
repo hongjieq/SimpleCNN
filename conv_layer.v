@@ -63,8 +63,8 @@ module conv_layer (
 	always @(*) begin
 		for (i = 0; i < 8; i=i+1) begin
 			for (j = 0; j < 25; j=j+1) begin
-				weight[i][j][31:0] = 0;
-				weight[i][j][68:32] = 0;
+				weight[i][j][31:0] = 'd0;
+				weight[i][j][68:32] = 'd0;
 			end
 		end
 	end

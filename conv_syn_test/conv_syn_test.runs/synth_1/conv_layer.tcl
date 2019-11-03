@@ -38,6 +38,9 @@ read_verilog -library xil_defaultlib C:/Users/Hannah/Desktop/MDP_CNN_Verilog/Sim
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_syn_test/conv_syn_test.srcs/constrs_1/new/run1.xdc
+set_property used_in_implementation false [get_files C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/conv_syn_test/conv_syn_test.srcs/constrs_1/new/run1.xdc]
+
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
