@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Oct 30 13:57:42 2019
-# Process ID: 8796
+# Start of session at: Sun Nov  3 14:17:16 2019
+# Process ID: 13668
 # Current directory: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1
 # Command line: vivado.exe -log simpleCNN_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simpleCNN_tb.tcl
 # Log file: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1/simpleCNN_tb.vds

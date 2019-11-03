@@ -74,30 +74,6 @@ module simpleCNN_tb();
 		.enable(enable),
 		.result(result),
 		.count(count),
-		.conv_result_1(conv_result_1),
-	 	.conv_result_2(conv_result_2),
-	 	.conv_result_3(conv_result_3),
-	 	.conv_result_4(conv_result_4),
-	 	.conv_result_5(conv_result_5),
-	 	.conv_result_6(conv_result_6),
-	 	.conv_result_7(conv_result_7),
-	 	.conv_result_8(conv_result_8),
-	 	.relu_result_1(relu_result_1),
-		.relu_result_2(relu_result_2),
-		.relu_result_3(relu_result_3),
-		.relu_result_4(relu_result_4),
-		.relu_result_5(relu_result_5),
-		.relu_result_6(relu_result_6),
-		.relu_result_7(relu_result_7),
-		.relu_result_8(relu_result_8),
-		.pool_result_1(pool_result_1),
-		.pool_result_2(pool_result_2),
-		.pool_result_3(pool_result_3),
-		.pool_result_4(pool_result_4),
-		.pool_result_5(pool_result_5),
-		.pool_result_6(pool_result_6),
-		.pool_result_7(pool_result_7),
-		.pool_result_8(pool_result_8),
 		.prob_0(prob_0),
 		.prob_1(prob_1),
 		.prob_2(prob_2),
@@ -115,14 +91,14 @@ module simpleCNN_tb();
 		#5;
 		clk = ~clk;
 	end
-
+/*
 	initial begin
 		f0 = $fopen("prob.txt","w");
 		f1 = $fopen("conv.txt","w");
 		f2 = $fopen("relu.txt","w");
 		f3 = $fopen("pool.txt","w");
 	end
-
+*/
 	initial begin
 		clk = 1'b0;
 		rst = 1'b1;
@@ -130,8 +106,9 @@ module simpleCNN_tb();
 		@(negedge clk);
 		rst = 1'b0;
 		
-		repeat (1000) begin
+		repeat (1000) 
 			@(negedge clk);
+			/*
 			$fwrite(f0, "%d		", count);
 			$fwrite(f0, "%d		", result);
 			$fwrite(f0, "%d	%d %d %d %d %d	%d %d %d %d", prob_0, prob_1, prob_2, prob_3, prob_4, prob_5, prob_6, prob_7, prob_8, prob_9);
@@ -177,7 +154,7 @@ module simpleCNN_tb();
 		$fclose(f3);
 		
 		$finish;
-
+                */
 	end
 
 endmodule
