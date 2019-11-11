@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov  3 14:17:16 2019
-# Process ID: 13668
+# Start of session at: Sun Nov  3 15:43:54 2019
+# Process ID: 18660
 # Current directory: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1
 # Command line: vivado.exe -log simpleCNN_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simpleCNN_tb.tcl
 # Log file: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1/simpleCNN_tb.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 40556 
+INFO: Helper process launched with PID 45612 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 417.766 ; gain = 105.477
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 417.402 ; gain = 105.727
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'simpleCNN_tb' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:22]
 INFO: [Synth 8-6157] synthesizing module 'simpleCNN' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:20]
@@ -27,24 +27,24 @@ INFO: [Synth 8-6157] synthesizing module 'relu_layer' [C:/Users/Hannah/Desktop/M
 INFO: [Synth 8-6155] done synthesizing module 'relu_layer' (2#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/relu_layer.v:7]
 INFO: [Synth 8-6157] synthesizing module 'pool_layer' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'pool_layer' (3#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:10]
-WARNING: [Synth 8-350] instance 'pool_l' of module 'pool_layer' requires 55 connections, but only 47 given [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1147]
-WARNING: [Synth 8-567] referenced signal 'prob_0' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_1' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_2' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_3' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_4' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_5' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_6' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_7' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_8' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
-WARNING: [Synth 8-567] referenced signal 'prob_9' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1252]
+WARNING: [Synth 8-350] instance 'pool_l' of module 'pool_layer' requires 55 connections, but only 47 given [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1153]
+WARNING: [Synth 8-567] referenced signal 'prob_0' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_1' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_2' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_3' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_4' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_5' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_6' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_7' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_8' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
+WARNING: [Synth 8-567] referenced signal 'prob_9' should be on the sensitivity list [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1258]
 INFO: [Synth 8-6155] done synthesizing module 'simpleCNN' (4#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:20]
 WARNING: [Synth 8-85] always block has no event control specified [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:90]
 WARNING: [Synth 8-3848] Net enable in module/entity simpleCNN_tb does not have driver. [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'simpleCNN_tb' (5#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:22]
 WARNING: [Synth 8-3331] design simpleCNN has unconnected port enable
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 1449.410 ; gain = 1137.121
+Finished RTL Elaboration : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1503.273 ; gain = 1191.598
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -57,10 +57,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:32 ; elapsed = 00:01:35 . Memory (MB): peak = 1449.410 ; gain = 1137.121
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:31 ; elapsed = 00:01:34 . Memory (MB): peak = 1503.273 ; gain = 1191.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:32 ; elapsed = 00:01:35 . Memory (MB): peak = 1449.410 ; gain = 1137.121
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:31 ; elapsed = 00:01:34 . Memory (MB): peak = 1503.273 ; gain = 1191.598
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z045ffg900-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -77,9 +77,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 2705.590 ; gain = 0.551
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 2823.129 ; gain = 1.105
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:47 ; elapsed = 00:02:46 . Memory (MB): peak = 2714.770 ; gain = 2402.480
+Finished Constraint Validation : Time (s): cpu = 00:02:50 ; elapsed = 00:02:51 . Memory (MB): peak = 2831.523 ; gain = 2519.848
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -87,13 +87,13 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045ffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:47 ; elapsed = 00:02:46 . Memory (MB): peak = 2714.770 ; gain = 2402.480
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:50 ; elapsed = 00:02:51 . Memory (MB): peak = 2831.523 ; gain = 2519.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:47 ; elapsed = 00:02:46 . Memory (MB): peak = 2714.770 ; gain = 2402.480
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:50 ; elapsed = 00:02:51 . Memory (MB): peak = 2831.523 ; gain = 2519.848
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "pool_reg[1151]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "pool_reg[1151]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -309,9 +309,202 @@ INFO: [Synth 8-5544] ROM "pool_reg[1053]" won't be mapped to Block RAM because a
 INFO: [Synth 8-5544] ROM "pool_reg[1052]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "fc_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'data_reg[0][3][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][4][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][5][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][6][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][7][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][8][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][9][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][10][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][11][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][12][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][13][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][14][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][15][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][16][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][17][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][18][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][19][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][20][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][21][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][22][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][23][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][24][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][25][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][26][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[0][27][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][0][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][1][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][2][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][3][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][4][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][5][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][6][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][7][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][8][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][9][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][10][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][11][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][12][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][13][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][14][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][15][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][16][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][17][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][18][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][19][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][20][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][21][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][22][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][23][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][24][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][25][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][26][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[1][27][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][0][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][1][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][2][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][3][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][4][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][5][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][6][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][7][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][8][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][9][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][10][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][11][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][12][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][13][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][14][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][15][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][16][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][17][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][18][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][19][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][20][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][21][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][22][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][23][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][24][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][25][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][26][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[2][27][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][0][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][1][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][2][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][3][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][4][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][5][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][6][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][7][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][8][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][9][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][10][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][11][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][12][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][13][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][14][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][15][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][16][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][17][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Synth 8-4471] merging register 'data_reg[3][18][31:0]' into 'data_reg[0][2][31:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][3] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][4] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][5] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][6] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][7] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][8] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][9] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][10] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][11] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][12] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][13] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][14] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][15] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][16] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][17] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][18] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][19] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][20] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][21] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][22] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][23] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][24] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][25] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][26] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[0][27] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][0] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][1] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][2] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][3] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][4] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][5] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][6] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][7] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][8] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][9] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][10] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][11] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][12] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][13] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][14] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][15] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][16] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][17] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][18] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][19] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][20] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][21] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][22] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][23] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][24] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][25] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][26] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[1][27] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][0] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][1] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][2] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][3] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][4] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][5] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][6] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][7] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][8] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][9] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][10] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][11] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][12] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][13] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][14] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][15] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][16] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][17] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][18] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][19] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][20] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][21] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][22] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][23] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][24] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][25] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][26] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[2][27] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][0] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][1] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][2] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][3] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][4] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][5] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][6] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][7] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+WARNING: [Synth 8-6014] Unused sequential element data_reg[3][8] was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:156]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "count_x" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "relu_count_x" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element  was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:977]
+INFO: [Synth 8-5546] ROM "data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-327] inferring latch for variable 'pool_reg[1151]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11695]
 WARNING: [Synth 8-327] inferring latch for variable 'pool_reg[1150]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11695]
 WARNING: [Synth 8-327] inferring latch for variable 'pool_reg[1149]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11695]
@@ -414,7 +607,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'pool_reg[1053]' [C:/Users/H
 WARNING: [Synth 8-327] inferring latch for variable 'pool_reg[1052]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11695]
 INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:02 ; elapsed = 00:04:07 . Memory (MB): peak = 2714.770 ; gain = 2402.480
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:16 ; elapsed = 00:04:25 . Memory (MB): peak = 2831.523 ; gain = 2519.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -528,55 +721,57 @@ Report RTL Partitions:
 |105   |pool_layer__GB101           |           1|     35881|
 |106   |pool_layer__GB102           |           1|     41606|
 |107   |pool_layer__GB103           |           1|      4059|
-|108   |simpleCNN__GCB0             |           1|     23071|
-|109   |simpleCNN__GCB1             |           1|     14160|
+|108   |simpleCNN__GCB0             |           1|     29010|
+|109   |simpleCNN__GCB1             |           1|      9670|
 |110   |simpleCNN__GCB2             |           1|     19340|
-|111   |simpleCNN__GCB3             |           1|     24594|
-|112   |simpleCNN__GCB4             |           1|     20370|
-|113   |simpleCNN__GCB5             |           1|     24175|
+|111   |simpleCNN__GCB3             |           1|     29010|
+|112   |simpleCNN__GCB4             |           1|     14505|
+|113   |simpleCNN__GCB5             |           1|     33845|
 |114   |simpleCNN__GCB6             |           1|     30267|
 |115   |simpleCNN__GCB7             |           1|      9670|
-|116   |simpleCNN__GCB8             |           1|     25629|
-|117   |simpleCNN__GCB9             |           1|      9739|
-|118   |simpleCNN__GCB10            |           1|     19271|
-|119   |simpleCNN__GCB11            |           1|     33845|
-|120   |simpleCNN__GCB12            |           1|     29010|
-|121   |simpleCNN__GCB13            |           1|     27078|
-|122   |simpleCNN__GCB14            |           1|      9601|
-|123   |simpleCNN__GCB15            |           1|      9670|
-|124   |simpleCNN__GCB16            |           1|     11602|
-|125   |simpleCNN__GCB17            |           1|     28941|
-|126   |simpleCNN__GCB18            |           1|     27906|
-|127   |simpleCNN__GCB19            |           1|      9670|
-|128   |simpleCNN__GCB20            |           1|      9670|
-|129   |simpleCNN__GCB21            |           1|     14505|
-|130   |simpleCNN__GCB22            |           1|     15471|
-|131   |simpleCNN__GCB23            |           1|     30326|
-|132   |simpleCNN__GCB24            |           1|     33845|
-|133   |simpleCNN__GCB25            |           1|      9670|
+|116   |simpleCNN__GCB8             |           1|     32810|
+|117   |simpleCNN__GCB9             |           1|      9670|
+|118   |simpleCNN__GCB10            |           1|     10705|
+|119   |simpleCNN__GCB11            |           1|     30533|
+|120   |simpleCNN__GCB12            |           1|     24175|
+|121   |simpleCNN__GCB13            |           1|     14505|
+|122   |simpleCNN__GCB14            |           1|     33845|
+|123   |simpleCNN__GCB15            |           1|     14436|
+|124   |simpleCNN__GCB16            |           1|     24244|
+|125   |simpleCNN__GCB17            |           1|     29010|
+|126   |simpleCNN__GCB18            |           1|      9670|
+|127   |simpleCNN__GCB19            |           1|     19340|
+|128   |simpleCNN__GCB20            |           1|     28941|
+|129   |simpleCNN__GCB21            |           1|      9739|
+|130   |simpleCNN__GCB22            |           1|     33845|
+|131   |simpleCNN__GCB23            |           1|     29010|
+|132   |simpleCNN__GCB24            |           1|     24175|
+|133   |simpleCNN__GCB25            |           1|     19910|
 |134   |simpleCNN__GCB26            |           1|     19340|
-|135   |simpleCNN__GCB27            |           1|     24175|
-|136   |simpleCNN__GCB28            |           1|     19340|
-|137   |simpleCNN__GCB29            |           1|     19340|
-|138   |simpleCNN__GCB30            |           1|     25698|
-|139   |simpleCNN__GCB31            |           1|     24106|
+|135   |simpleCNN__GCB27            |           1|     19340|
+|136   |simpleCNN__GCB28            |           1|     19074|
+|137   |simpleCNN__GCB29            |           1|      9670|
+|138   |simpleCNN__GCB30            |           1|     33845|
+|139   |simpleCNN__GCB31            |           1|      9670|
 |140   |simpleCNN__GCB32            |           1|     14505|
-|141   |simpleCNN__GCB33            |           1|      9739|
-|142   |simpleCNN__GCB34            |           1|     14505|
-|143   |simpleCNN__GCB35            |           1|     24175|
-|144   |simpleCNN__GCB36            |           1|     31337|
-|145   |simpleCNN__GCB37            |           1|     29148|
-|146   |simpleCNN__GCB38            |           1|     10084|
-|147   |simpleCNN__GCB39            |           1|     24175|
-|148   |simpleCNN__GCB40            |           1|     19340|
-|149   |simpleCNN__GCB41            |           1|     14505|
-|150   |simpleCNN__GCB42            |           1|     25312|
-|151   |simpleCNN__GCB43            |           1|     21994|
-|152   |simpleCNN__GCB44            |           1|     26590|
-|153   |simpleCNN__GCB45            |           1|     33845|
-|154   |simpleCNN__GCB46            |           1|     15255|
-|155   |simpleCNN__GCB47            |           1|     29725|
-|156   |simpleCNN__GCB48            |           1|     28964|
+|141   |simpleCNN__GCB33            |           1|     27285|
+|142   |simpleCNN__GCB34            |           1|     19064|
+|143   |simpleCNN__GCB35            |           1|     11671|
+|144   |simpleCNN__GCB36            |           1|      9670|
+|145   |simpleCNN__GCB37            |           1|     26043|
+|146   |simpleCNN__GCB38            |           1|      9670|
+|147   |simpleCNN__GCB39            |           1|      9706|
+|148   |simpleCNN__GCB40            |           1|     14505|
+|149   |simpleCNN__GCB41            |           1|     35379|
+|150   |simpleCNN__GCB42            |           1|     32919|
+|151   |simpleCNN__GCB43            |           1|      9363|
+|152   |simpleCNN__GCB44            |           1|     12176|
+|153   |simpleCNN__GCB45            |           1|     12974|
+|154   |simpleCNN__GCB46            |           1|     31803|
+|155   |simpleCNN__GCB47            |           1|     24175|
+|156   |simpleCNN__GCB48            |           1|     29570|
+|157   |simpleCNN__GCB49            |           1|     19340|
+|158   |simpleCNN__GCB50            |           1|     23010|
 +------+----------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -591,6 +786,7 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit       Adders := 2     
 +---Registers : 
 	               69 Bit    Registers := 24    
+	               32 Bit    Registers := 128   
 	               11 Bit    Registers := 11    
 	                5 Bit    Registers := 5     
 	                4 Bit    Registers := 2     
@@ -613,18 +809,21 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input    113 Bit        Muxes := 11    
 	   2 Input     69 Bit        Muxes := 32    
-	  28 Input     25 Bit        Muxes := 60    
-	   8 Input     25 Bit        Muxes := 5     
-	  28 Input     24 Bit        Muxes := 5     
-	  28 Input     23 Bit        Muxes := 10    
-	  28 Input     21 Bit        Muxes := 5     
-	  28 Input     19 Bit        Muxes := 5     
+	   6 Input     32 Bit        Muxes := 12    
+	   5 Input     32 Bit        Muxes := 12    
+	   8 Input     32 Bit        Muxes := 5     
+	  15 Input     32 Bit        Muxes := 2     
+	  14 Input     32 Bit        Muxes := 3     
+	  12 Input     32 Bit        Muxes := 1     
+	  16 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 5     
+	  28 Input      4 Bit        Muxes := 7     
+	  28 Input      3 Bit        Muxes := 29    
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 6     
-	  28 Input      3 Bit        Muxes := 5     
-	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 2809  
 	   3 Input      1 Bit        Muxes := 144   
 	   4 Input      1 Bit        Muxes := 116   
@@ -684,23 +883,27 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit       Adders := 4     
 	   2 Input      4 Bit       Adders := 2     
 +---Registers : 
+	               32 Bit    Registers := 128   
 	                5 Bit    Registers := 5     
 	                4 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input    113 Bit        Muxes := 11    
-	  28 Input     25 Bit        Muxes := 60    
-	   8 Input     25 Bit        Muxes := 5     
-	  28 Input     24 Bit        Muxes := 5     
-	  28 Input     23 Bit        Muxes := 10    
-	  28 Input     21 Bit        Muxes := 5     
-	  28 Input     19 Bit        Muxes := 5     
+	   6 Input     32 Bit        Muxes := 12    
+	   5 Input     32 Bit        Muxes := 12    
+	   8 Input     32 Bit        Muxes := 5     
+	  15 Input     32 Bit        Muxes := 2     
+	  14 Input     32 Bit        Muxes := 3     
+	  12 Input     32 Bit        Muxes := 1     
+	  16 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 5     
+	  28 Input      4 Bit        Muxes := 7     
+	  28 Input      3 Bit        Muxes := 29    
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 6     
-	  28 Input      3 Bit        Muxes := 5     
-	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 580   
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -717,13 +920,6 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11719]
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11720]
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11723]
@@ -763,106 +959,106 @@ DSP Report: operator prob_51 is absorbed into DSP prob_51.
 DSP Report: Generating DSP prob_51, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator prob_51 is absorbed into DSP prob_51.
 DSP Report: operator prob_51 is absorbed into DSP prob_51.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[32] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[33] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[34] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[35] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[36] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[37] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[38] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[39] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[40] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[41] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[42] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[43] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[44] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[45] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[46] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[47] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[48] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[49] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[50] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[51] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[52] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[53] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[54] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[55] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[56] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[57] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[58] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[59] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[60] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[61] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[62] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[63] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[64] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[65] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[66] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[67] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[68] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[69] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[70] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[71] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[72] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[73] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[74] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[75] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[76] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[80] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[81] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[82] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[83] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[84] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[85] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[86] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[87] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[88] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[89] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[90] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[91] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[92] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[93] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[94] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[95] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[96] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[97] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[98] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pool_li_100/\prob_5_reg[99] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[27][24][31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[22][16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[19][16][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[18][16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[17][16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[16][16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[15][16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[12][22][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[6][11][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[10][16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[9][16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[8][16][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[7][16][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[6][10][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[22][16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[19][16][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[18][16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[17][16][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[16][16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[15][16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[12][22][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[6][11][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[10][16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[9][16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[8][16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[7][16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[6][10][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[22][16][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[19][16][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[18][16][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[17][16][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[16][16][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[15][16][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[12][22][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[6][11][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[10][16][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[9][16][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[8][16][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[7][16][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[6][10][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[22][16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[19][16][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[18][16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[17][16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[16][16][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[15][16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[12][22][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[6][11][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[10][16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[9][16][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[8][16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[7][16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[6][10][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[22][16][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[19][16][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[18][16][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[17][16][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[16][16][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[15][16][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[12][22][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[6][11][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[10][16][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[9][16][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[8][16][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[7][16][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[6][10][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[22][16][5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (DUTi_149/\data_reg[19][16][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[18][16][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DUTi_149/\data_reg[17][16][5] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:277]
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:277]
@@ -956,6 +1152,10 @@ INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recomm
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:310]
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:310]
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:310]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:311]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:311]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:311]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:311]
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:311]
 INFO: [Common 17-14] Message 'Synth 8-5845' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 DSP Report: Generating DSP conv_result_124, operation Mode is: (A:0x1aa46b)*B.
@@ -1840,10 +2040,6 @@ DSP Report: operator conv_result_624 is absorbed into DSP conv_result_624.
 DSP Report: Generating DSP conv_result_624, operation Mode is: (PCIN>>17)+(A:0x70ccd)*B.
 DSP Report: operator conv_result_624 is absorbed into DSP conv_result_624.
 DSP Report: operator conv_result_624 is absorbed into DSP conv_result_624.
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:297]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:297]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:297]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v:297]
 INFO: [Common 17-14] Message 'Synth 8-5845' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 DSP Report: Generating DSP conv_result_524, operation Mode is: (A:0x3f782181)*B.
 DSP Report: operator conv_result_524 is absorbed into DSP conv_result_524.
@@ -2164,9 +2360,6 @@ DSP Report: Generating DSP conv_result_324, operation Mode is: (PCIN>>17)+(A:0x3
 DSP Report: operator conv_result_324 is absorbed into DSP conv_result_324.
 DSP Report: operator conv_result_324 is absorbed into DSP conv_result_324.
 INFO: [Synth 8-5546] ROM "fc_done" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
-WARNING: [Synth 8-6014] Unused sequential element count_reg_rep was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11741]
 DSP Report: Generating DSP prob_41, operation Mode is: A*B.
 DSP Report: operator prob_41 is absorbed into DSP prob_41.
 DSP Report: operator prob_41 is absorbed into DSP prob_41.
@@ -2251,116 +2444,45 @@ DSP Report: operator prob_71 is absorbed into DSP prob_71.
 DSP Report: Generating DSP prob_71, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator prob_71 is absorbed into DSP prob_71.
 DSP Report: operator prob_71 is absorbed into DSP prob_71.
-INFO: [Synth 8-4471] merging register 'relu_count_x_reg[4:0]' into 'relu_count_x_reg[4:0]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1043]
-WARNING: [Synth 8-6014] Unused sequential element relu_count_x_reg was removed.  [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:1043]
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3917] design simpleCNN__GCB42 has port P[0] driven by constant 0
-WARNING: [Synth 8-3917] design simpleCNN__GCB42 has port O3817[0] driven by constant 0
-INFO: [Synth 8-3886] merging instance 'data_44_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_44_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_44_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_44_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_44_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_44_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_44_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_44_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_43_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_43_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_43_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_43_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_43_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_43_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_43_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_43_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_42_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_42_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_42_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_42_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_42_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_42_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_42_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_42_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_41_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_41_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_41_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_41_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_41_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_41_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_41_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_41_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_40_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_40_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_40_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_40_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_40_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_40_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_40_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_40_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_34_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_34_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_34_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_34_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_34_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_34_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_34_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_34_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_33_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_33_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_33_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_33_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_33_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_33_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_33_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_33_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_32_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_32_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_32_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_32_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_32_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_32_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_32_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_32_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_31_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_31_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_31_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_31_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_31_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_31_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_31_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_31_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_30_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_30_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_30_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_30_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_30_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_30_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_30_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_30_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_24_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_24_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_24_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_24_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_24_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_24_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_24_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_24_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_23_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_23_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_23_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_23_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_23_reg[28]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_23_reg[29]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_23_reg[30]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_23_reg[31]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_22_reg[24]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_22_reg[25]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_22_reg[26]' (LD) to 'data_00_reg[24]'
-INFO: [Synth 8-3886] merging instance 'data_22_reg[27]' (LD) to 'data_00_reg[24]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3917] design simpleCNN__GCB42 has port O3877[0] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][0]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][1]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][2]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][3]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][4]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][5]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][6]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][7]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][8]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][9]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][10]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][11]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][12]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][13]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][14]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][15]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][16]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][17]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][18]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][19]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][20]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][21]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][22]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][23]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][24]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][25]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][26]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][27]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][28]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][29]' (FDRE) to 'data_reg[0][2][31]'
+INFO: [Synth 8-3886] merging instance 'data_reg[0][2][30]' (FDRE) to 'data_reg[0][2][31]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:22:51 ; elapsed = 00:23:16 . Memory (MB): peak = 3030.098 ; gain = 2717.809
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:25:04 ; elapsed = 00:25:48 . Memory (MB): peak = 3043.953 ; gain = 2732.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2380,11 +2502,6 @@ ROM:
 |pool_layer   | count_reg_rep | 2048x23       | Block RAM      | 
 |pool_layer   | count_reg_rep | 2048x24       | Block RAM      | 
 |pool_layer   | count_reg_rep | 2048x23       | Block RAM      | 
-|simpleCNN    | data          | 32x25         | LUT            | 
-|simpleCNN    | data          | 32x25         | LUT            | 
-|simpleCNN    | data          | 32x25         | LUT            | 
-|simpleCNN    | data          | 32x25         | LUT            | 
-|simpleCNN    | data          | 32x25         | LUT            | 
 |simpleCNN_tb | count_reg_rep | 2048x23       | Block RAM      | 
 |simpleCNN_tb | count_reg_rep | 2048x23       | Block RAM      | 
 |simpleCNN_tb | count_reg_rep | 2048x24       | Block RAM      | 
@@ -2975,67 +3092,139 @@ Report RTL Partitions:
 |105   |pool_layer__GB101           |           1|     34964|
 |106   |pool_layer__GB102           |           1|     40010|
 |107   |pool_layer__GB103           |           1|      4263|
-|108   |simpleCNN__GCB0             |           1|     23051|
-|109   |simpleCNN__GCB1             |           1|     14150|
+|108   |simpleCNN__GCB0             |           1|     28985|
+|109   |simpleCNN__GCB1             |           1|      9665|
 |110   |simpleCNN__GCB2             |           1|     19325|
-|111   |simpleCNN__GCB3             |           1|     24569|
-|112   |simpleCNN__GCB4             |           1|     20360|
-|113   |simpleCNN__GCB5             |           1|     24155|
+|111   |simpleCNN__GCB3             |           1|     28985|
+|112   |simpleCNN__GCB4             |           1|     14495|
+|113   |simpleCNN__GCB5             |           1|     33815|
 |114   |simpleCNN__GCB6             |           1|     30232|
 |115   |simpleCNN__GCB7             |           1|      9665|
-|116   |simpleCNN__GCB8             |           1|     25609|
-|117   |simpleCNN__GCB9             |           1|      9734|
-|118   |simpleCNN__GCB10            |           1|     19256|
-|119   |simpleCNN__GCB11            |           1|     33815|
-|120   |simpleCNN__GCB12            |           1|     28985|
-|121   |simpleCNN__GCB13            |           1|     27053|
-|122   |simpleCNN__GCB14            |           1|      9596|
-|123   |simpleCNN__GCB15            |           1|      9665|
-|124   |simpleCNN__GCB16            |           1|     11597|
-|125   |simpleCNN__GCB17            |           1|     28916|
-|126   |simpleCNN__GCB18            |           1|     27881|
-|127   |simpleCNN__GCB19            |           1|      9665|
-|128   |simpleCNN__GCB20            |           1|      9665|
-|129   |simpleCNN__GCB21            |           1|     14495|
-|130   |simpleCNN__GCB22            |           1|     15461|
-|131   |simpleCNN__GCB23            |           1|     30301|
-|132   |simpleCNN__GCB24            |           1|     33815|
-|133   |simpleCNN__GCB25            |           1|      9665|
+|116   |simpleCNN__GCB8             |           1|     32780|
+|117   |simpleCNN__GCB9             |           1|      9665|
+|118   |simpleCNN__GCB10            |           1|     10700|
+|119   |simpleCNN__GCB11            |           1|     30508|
+|120   |simpleCNN__GCB12            |           1|     24155|
+|121   |simpleCNN__GCB13            |           1|     14495|
+|122   |simpleCNN__GCB14            |           1|     33815|
+|123   |simpleCNN__GCB15            |           1|     14426|
+|124   |simpleCNN__GCB16            |           1|     24224|
+|125   |simpleCNN__GCB17            |           1|     28985|
+|126   |simpleCNN__GCB18            |           1|      9665|
+|127   |simpleCNN__GCB19            |           1|     19325|
+|128   |simpleCNN__GCB20            |           1|     28916|
+|129   |simpleCNN__GCB21            |           1|      9734|
+|130   |simpleCNN__GCB22            |           1|     33815|
+|131   |simpleCNN__GCB23            |           1|     28985|
+|132   |simpleCNN__GCB24            |           1|     24155|
+|133   |simpleCNN__GCB25            |           1|     19439|
 |134   |simpleCNN__GCB26            |           1|     19325|
-|135   |simpleCNN__GCB27            |           1|     24155|
-|136   |simpleCNN__GCB28            |           1|     19325|
-|137   |simpleCNN__GCB29            |           1|     19325|
-|138   |simpleCNN__GCB30            |           1|     25678|
-|139   |simpleCNN__GCB31            |           1|     24086|
+|135   |simpleCNN__GCB27            |           1|     19325|
+|136   |simpleCNN__GCB28            |           1|     19049|
+|137   |simpleCNN__GCB29            |           1|      9665|
+|138   |simpleCNN__GCB30            |           1|     33815|
+|139   |simpleCNN__GCB31            |           1|      9665|
 |140   |simpleCNN__GCB32            |           1|     14495|
-|141   |simpleCNN__GCB33            |           1|      9734|
-|142   |simpleCNN__GCB34            |           1|     14495|
-|143   |simpleCNN__GCB35            |           1|     24155|
-|144   |simpleCNN__GCB36            |           1|     30655|
-|145   |simpleCNN__GCB37            |           1|     29123|
-|146   |simpleCNN__GCB38            |           1|     10079|
-|147   |simpleCNN__GCB39            |           1|     24155|
-|148   |simpleCNN__GCB40            |           1|     19325|
-|149   |simpleCNN__GCB41            |           1|     14495|
-|150   |simpleCNN__GCB42            |           1|     17585|
-|151   |simpleCNN__GCB43            |           1|     19663|
-|152   |simpleCNN__GCB44            |           1|     13057|
-|153   |simpleCNN__GCB45            |           1|     33815|
-|154   |simpleCNN__GCB46            |           1|     14658|
-|155   |simpleCNN__GCB47            |           1|     29105|
-|156   |simpleCNN__GCB48            |           1|     25159|
+|141   |simpleCNN__GCB33            |           1|     27260|
+|142   |simpleCNN__GCB34            |           1|     19049|
+|143   |simpleCNN__GCB35            |           1|     11666|
+|144   |simpleCNN__GCB36            |           1|      9665|
+|145   |simpleCNN__GCB37            |           1|     26018|
+|146   |simpleCNN__GCB38            |           1|      9665|
+|147   |simpleCNN__GCB39            |           1|      8056|
+|148   |simpleCNN__GCB40            |           1|     14495|
+|149   |simpleCNN__GCB41            |           1|     34050|
+|150   |simpleCNN__GCB42            |           1|     17481|
+|151   |simpleCNN__GCB43            |           1|      3530|
+|152   |simpleCNN__GCB44            |           1|      9238|
+|153   |simpleCNN__GCB45            |           1|     11498|
+|154   |simpleCNN__GCB46            |           1|     29305|
+|155   |simpleCNN__GCB47            |           1|     24155|
+|156   |simpleCNN__GCB48            |           1|     29545|
+|157   |simpleCNN__GCB49            |           1|     19325|
+|158   |simpleCNN__GCB50            |           1|     19644|
 +------+----------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:23:59 ; elapsed = 00:24:46 . Memory (MB): peak = 3228.867 ; gain = 2916.578
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:26:09 ; elapsed = 00:27:14 . Memory (MB): peak = 3243.059 ; gain = 2931.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][0][0]' (LD) to 'DUTi_154/relu_reg[0][0][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][480][0]' (LD) to 'DUTi_154/relu_reg[0][480][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][456][0]' (LD) to 'DUTi_154/relu_reg[0][456][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][432][0]' (LD) to 'DUTi_154/relu_reg[0][432][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][408][0]' (LD) to 'DUTi_154/relu_reg[0][408][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][552][0]' (LD) to 'DUTi_154/relu_reg[0][552][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][528][0]' (LD) to 'DUTi_154/relu_reg[0][528][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][504][0]' (LD) to 'DUTi_154/relu_reg[0][504][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][384][0]' (LD) to 'DUTi_154/relu_reg[0][384][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][360][0]' (LD) to 'DUTi_154/relu_reg[0][360][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][336][0]' (LD) to 'DUTi_154/relu_reg[0][336][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][312][0]' (LD) to 'DUTi_154/relu_reg[0][312][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][288][0]' (LD) to 'DUTi_154/relu_reg[0][288][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][264][0]' (LD) to 'DUTi_154/relu_reg[0][264][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][240][0]' (LD) to 'DUTi_154/relu_reg[0][240][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][216][0]' (LD) to 'DUTi_154/relu_reg[0][216][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][192][0]' (LD) to 'DUTi_154/relu_reg[0][192][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][168][0]' (LD) to 'DUTi_154/relu_reg[0][168][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][144][0]' (LD) to 'DUTi_154/relu_reg[0][144][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][120][0]' (LD) to 'DUTi_154/relu_reg[0][120][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][96][0]' (LD) to 'DUTi_154/relu_reg[0][96][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][72][0]' (LD) to 'DUTi_154/relu_reg[0][72][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][48][0]' (LD) to 'DUTi_154/relu_reg[0][48][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][24][0]' (LD) to 'DUTi_154/relu_reg[0][24][1]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][0][1]' (LD) to 'DUTi_154/relu_reg[0][0][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][480][1]' (LD) to 'DUTi_154/relu_reg[0][480][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][456][1]' (LD) to 'DUTi_154/relu_reg[0][456][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][432][1]' (LD) to 'DUTi_154/relu_reg[0][432][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][408][1]' (LD) to 'DUTi_154/relu_reg[0][408][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][552][1]' (LD) to 'DUTi_154/relu_reg[0][552][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][528][1]' (LD) to 'DUTi_154/relu_reg[0][528][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][504][1]' (LD) to 'DUTi_154/relu_reg[0][504][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][384][1]' (LD) to 'DUTi_154/relu_reg[0][384][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][360][1]' (LD) to 'DUTi_154/relu_reg[0][360][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][336][1]' (LD) to 'DUTi_154/relu_reg[0][336][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][312][1]' (LD) to 'DUTi_154/relu_reg[0][312][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][288][1]' (LD) to 'DUTi_154/relu_reg[0][288][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][264][1]' (LD) to 'DUTi_154/relu_reg[0][264][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][240][1]' (LD) to 'DUTi_154/relu_reg[0][240][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][216][1]' (LD) to 'DUTi_154/relu_reg[0][216][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][192][1]' (LD) to 'DUTi_154/relu_reg[0][192][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][168][1]' (LD) to 'DUTi_154/relu_reg[0][168][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][144][1]' (LD) to 'DUTi_154/relu_reg[0][144][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][120][1]' (LD) to 'DUTi_154/relu_reg[0][120][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][96][1]' (LD) to 'DUTi_154/relu_reg[0][96][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][72][1]' (LD) to 'DUTi_154/relu_reg[0][72][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][48][1]' (LD) to 'DUTi_154/relu_reg[0][48][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][24][1]' (LD) to 'DUTi_154/relu_reg[0][24][2]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][0][2]' (LD) to 'DUTi_154/relu_reg[0][0][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][480][2]' (LD) to 'DUTi_154/relu_reg[0][480][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][456][2]' (LD) to 'DUTi_154/relu_reg[0][456][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][432][2]' (LD) to 'DUTi_154/relu_reg[0][432][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][408][2]' (LD) to 'DUTi_154/relu_reg[0][408][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][552][2]' (LD) to 'DUTi_154/relu_reg[0][552][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][528][2]' (LD) to 'DUTi_154/relu_reg[0][528][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][504][2]' (LD) to 'DUTi_154/relu_reg[0][504][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][384][2]' (LD) to 'DUTi_154/relu_reg[0][384][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][360][2]' (LD) to 'DUTi_154/relu_reg[0][360][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][336][2]' (LD) to 'DUTi_154/relu_reg[0][336][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][312][2]' (LD) to 'DUTi_154/relu_reg[0][312][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][288][2]' (LD) to 'DUTi_154/relu_reg[0][288][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][264][2]' (LD) to 'DUTi_154/relu_reg[0][264][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][240][2]' (LD) to 'DUTi_154/relu_reg[0][240][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][216][2]' (LD) to 'DUTi_154/relu_reg[0][216][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][192][2]' (LD) to 'DUTi_154/relu_reg[0][192][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][168][2]' (LD) to 'DUTi_154/relu_reg[0][168][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][144][2]' (LD) to 'DUTi_154/relu_reg[0][144][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][120][2]' (LD) to 'DUTi_154/relu_reg[0][120][3]'
+INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][96][2]' (LD) to 'DUTi_154/relu_reg[0][96][3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:24:32 ; elapsed = 00:25:22 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished Timing Optimization : Time (s): cpu = 00:26:48 ; elapsed = 00:27:55 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3051,7 +3240,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:24:36 ; elapsed = 00:25:48 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished Technology Mapping : Time (s): cpu = 00:26:52 ; elapsed = 00:28:20 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3079,7 +3268,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:24:38 ; elapsed = 00:25:50 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished IO Insertion : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3092,7 +3281,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:24:38 ; elapsed = 00:25:50 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished Renaming Generated Instances : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3104,25 +3293,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:24:38 ; elapsed = 00:25:50 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:24:38 ; elapsed = 00:25:50 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished Renaming Generated Ports : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:24:38 ; elapsed = 00:25:50 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished Handling Custom Attributes : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:24:38 ; elapsed = 00:25:50 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished Renaming Generated Nets : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3147,11 +3336,11 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:24:38 ; elapsed = 00:25:50 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Finished Writing Synthesis Report : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5809 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:21:59 ; elapsed = 00:24:52 . Memory (MB): peak = 3240.395 ; gain = 1662.746
-Synthesis Optimization Complete : Time (s): cpu = 00:24:38 ; elapsed = 00:25:54 . Memory (MB): peak = 3240.395 ; gain = 2928.105
+Synthesis finished with 0 errors, 0 critical warnings and 6464 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:24:13 ; elapsed = 00:27:20 . Memory (MB): peak = 3254.684 ; gain = 1614.758
+Synthesis Optimization Complete : Time (s): cpu = 00:26:54 ; elapsed = 00:28:26 . Memory (MB): peak = 3254.684 ; gain = 2943.008
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -3159,11 +3348,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-555 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
+659 Infos, 217 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:24:42 ; elapsed = 00:26:00 . Memory (MB): peak = 3240.395 ; gain = 2941.117
+synth_design: Time (s): cpu = 00:26:58 ; elapsed = 00:28:32 . Memory (MB): peak = 3254.684 ; gain = 2956.016
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1/simpleCNN_tb.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file simpleCNN_tb_utilization_synth.rpt -pb simpleCNN_tb_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.244 . Memory (MB): peak = 3240.395 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 14:43:24 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.220 . Memory (MB): peak = 3254.684 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 16:12:35 2019...
