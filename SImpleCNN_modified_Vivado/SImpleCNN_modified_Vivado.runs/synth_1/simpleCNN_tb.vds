@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov  3 15:43:54 2019
-# Process ID: 18660
+# Start of session at: Mon Nov 11 18:43:37 2019
+# Process ID: 83184
 # Current directory: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1
 # Command line: vivado.exe -log simpleCNN_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simpleCNN_tb.tcl
 # Log file: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1/simpleCNN_tb.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 45612 
+INFO: Helper process launched with PID 83004 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 417.402 ; gain = 105.727
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 417.809 ; gain = 105.809
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'simpleCNN_tb' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:22]
 INFO: [Synth 8-6157] synthesizing module 'simpleCNN' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v:20]
@@ -44,7 +44,7 @@ WARNING: [Synth 8-3848] Net enable in module/entity simpleCNN_tb does not have d
 INFO: [Synth 8-6155] done synthesizing module 'simpleCNN_tb' (5#1) [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v:22]
 WARNING: [Synth 8-3331] design simpleCNN has unconnected port enable
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1503.273 ; gain = 1191.598
+Finished RTL Elaboration : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 1505.496 ; gain = 1193.496
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -57,10 +57,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:31 ; elapsed = 00:01:34 . Memory (MB): peak = 1503.273 ; gain = 1191.598
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1505.496 ; gain = 1193.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:31 ; elapsed = 00:01:34 . Memory (MB): peak = 1503.273 ; gain = 1191.598
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1505.496 ; gain = 1193.496
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z045ffg900-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -77,9 +77,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 2823.129 ; gain = 1.105
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 2823.867 ; gain = 1.102
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:50 ; elapsed = 00:02:51 . Memory (MB): peak = 2831.523 ; gain = 2519.848
+Finished Constraint Validation : Time (s): cpu = 00:02:43 ; elapsed = 00:02:46 . Memory (MB): peak = 2831.477 ; gain = 2519.477
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -87,13 +87,13 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045ffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:50 ; elapsed = 00:02:51 . Memory (MB): peak = 2831.523 ; gain = 2519.848
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:43 ; elapsed = 00:02:46 . Memory (MB): peak = 2831.477 ; gain = 2519.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:50 ; elapsed = 00:02:51 . Memory (MB): peak = 2831.523 ; gain = 2519.848
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:43 ; elapsed = 00:02:46 . Memory (MB): peak = 2831.477 ; gain = 2519.477
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "pool_reg[1151]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "pool_reg[1151]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -607,7 +607,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'pool_reg[1053]' [C:/Users/H
 WARNING: [Synth 8-327] inferring latch for variable 'pool_reg[1052]' [C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v:11695]
 INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:16 ; elapsed = 00:04:25 . Memory (MB): peak = 2831.523 ; gain = 2519.848
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:08 ; elapsed = 00:04:33 . Memory (MB): peak = 2831.477 ; gain = 2519.477
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1746,6 +1746,7 @@ DSP Report: operator conv_result_724 is absorbed into DSP conv_result_724.
 DSP Report: Generating DSP conv_result_724, operation Mode is: (PCIN>>17)+(A:0x3fd7ed0f)*B.
 DSP Report: operator conv_result_724 is absorbed into DSP conv_result_724.
 DSP Report: operator conv_result_724 is absorbed into DSP conv_result_724.
+INFO: [Common 17-14] Message 'Synth 8-5845' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 DSP Report: Generating DSP conv_result_224, operation Mode is: (A:0x3f7d0b2d)*B.
 DSP Report: operator conv_result_224 is absorbed into DSP conv_result_224.
 DSP Report: operator conv_result_224 is absorbed into DSP conv_result_224.
@@ -2040,7 +2041,6 @@ DSP Report: operator conv_result_624 is absorbed into DSP conv_result_624.
 DSP Report: Generating DSP conv_result_624, operation Mode is: (PCIN>>17)+(A:0x70ccd)*B.
 DSP Report: operator conv_result_624 is absorbed into DSP conv_result_624.
 DSP Report: operator conv_result_624 is absorbed into DSP conv_result_624.
-INFO: [Common 17-14] Message 'Synth 8-5845' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 DSP Report: Generating DSP conv_result_524, operation Mode is: (A:0x3f782181)*B.
 DSP Report: operator conv_result_524 is absorbed into DSP conv_result_524.
 DSP Report: operator conv_result_524 is absorbed into DSP conv_result_524.
@@ -2448,7 +2448,6 @@ INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instan
 WARNING: [Synth 8-3917] design simpleCNN__GCB42 has port P[0] driven by constant 0
 WARNING: [Synth 8-3917] design simpleCNN__GCB42 has port O3877[0] driven by constant 0
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "data" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3886] merging instance 'data_reg[0][2][0]' (FDRE) to 'data_reg[0][2][31]'
 INFO: [Synth 8-3886] merging instance 'data_reg[0][2][1]' (FDRE) to 'data_reg[0][2][31]'
@@ -2482,7 +2481,7 @@ INFO: [Synth 8-3886] merging instance 'data_reg[0][2][28]' (FDRE) to 'data_reg[0
 INFO: [Synth 8-3886] merging instance 'data_reg[0][2][29]' (FDRE) to 'data_reg[0][2][31]'
 INFO: [Synth 8-3886] merging instance 'data_reg[0][2][30]' (FDRE) to 'data_reg[0][2][31]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:25:04 ; elapsed = 00:25:48 . Memory (MB): peak = 3043.953 ; gain = 2732.277
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:23:11 ; elapsed = 00:56:19 . Memory (MB): peak = 3042.805 ; gain = 2730.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -3148,7 +3147,7 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:26:09 ; elapsed = 00:27:14 . Memory (MB): peak = 3243.059 ; gain = 2931.383
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:24:14 ; elapsed = 00:57:47 . Memory (MB): peak = 3240.430 ; gain = 2928.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -3224,7 +3223,7 @@ INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][120][2]' (LD) to 'DU
 INFO: [Synth 8-3886] merging instance 'DUTi_154/relu_reg[0][96][2]' (LD) to 'DUTi_154/relu_reg[0][96][3]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:26:48 ; elapsed = 00:27:55 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished Timing Optimization : Time (s): cpu = 00:24:54 ; elapsed = 00:58:41 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3240,7 +3239,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:26:52 ; elapsed = 00:28:20 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished Technology Mapping : Time (s): cpu = 00:24:58 ; elapsed = 00:59:06 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3268,7 +3267,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished IO Insertion : Time (s): cpu = 00:24:59 ; elapsed = 00:59:08 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3281,7 +3280,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished Renaming Generated Instances : Time (s): cpu = 00:24:59 ; elapsed = 00:59:08 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3293,25 +3292,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:24:59 ; elapsed = 00:59:08 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished Renaming Generated Ports : Time (s): cpu = 00:24:59 ; elapsed = 00:59:08 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished Handling Custom Attributes : Time (s): cpu = 00:24:59 ; elapsed = 00:59:08 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished Renaming Generated Nets : Time (s): cpu = 00:24:59 ; elapsed = 00:59:08 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3336,11 +3335,11 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:26:53 ; elapsed = 00:28:22 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Finished Writing Synthesis Report : Time (s): cpu = 00:24:59 ; elapsed = 00:59:08 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6464 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:24:13 ; elapsed = 00:27:20 . Memory (MB): peak = 3254.684 ; gain = 1614.758
-Synthesis Optimization Complete : Time (s): cpu = 00:26:54 ; elapsed = 00:28:26 . Memory (MB): peak = 3254.684 ; gain = 2943.008
+Synthesis Optimization Runtime : Time (s): cpu = 00:22:25 ; elapsed = 00:58:09 . Memory (MB): peak = 3251.887 ; gain = 1613.906
+Synthesis Optimization Complete : Time (s): cpu = 00:25:00 ; elapsed = 00:59:16 . Memory (MB): peak = 3251.887 ; gain = 2939.887
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -3348,11 +3347,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-659 Infos, 217 Warnings, 0 Critical Warnings and 0 Errors encountered.
+658 Infos, 217 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:26:58 ; elapsed = 00:28:32 . Memory (MB): peak = 3254.684 ; gain = 2956.016
+synth_design: Time (s): cpu = 00:25:04 ; elapsed = 00:59:23 . Memory (MB): peak = 3251.887 ; gain = 2952.520
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.runs/synth_1/simpleCNN_tb.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file simpleCNN_tb_utilization_synth.rpt -pb simpleCNN_tb_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.220 . Memory (MB): peak = 3254.684 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  3 16:12:35 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.275 . Memory (MB): peak = 3251.887 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 11 19:43:08 2019...

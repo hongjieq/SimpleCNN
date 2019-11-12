@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Nov 11 14:47:05 2019
+# Process ID: 84800
+# Current directory: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/Power_RELU_layer/Power_RELU_layer.runs/synth_1
+# Command line: vivado.exe -log relu_layer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source relu_layer.tcl
+# Log file: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/Power_RELU_layer/Power_RELU_layer.runs/synth_1/relu_layer.vds
+# Journal file: C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/Power_RELU_layer/Power_RELU_layer.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source relu_layer.tcl -notrace

@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 100ns / 1ps
 /*
 `define DATA_X 28
 `define DATA_Y 28
