@@ -1,4 +1,0 @@
-ERROR: Exception caught trying to open file C:\Users\Hannah\Desktop\MDP_CNN_Verilog\SimpleCNN\Power_POOL_FC_layer\Power_POOL_FC_layer.runs\synth_1/runme.log
-	Exception name: Error
-	Exception error code: 70
-	Exception message: Permission denied

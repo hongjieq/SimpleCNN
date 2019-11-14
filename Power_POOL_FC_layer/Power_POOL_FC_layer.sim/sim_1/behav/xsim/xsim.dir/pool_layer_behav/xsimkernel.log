@@ -1,4 +1,4 @@
-Running: xsim.dir/pool_layer_behav/xsimk.exe -simmode gui -wdb pool_layer_behav.wdb -simrunnum 0 -socket 58773
+Running: xsim.dir/pool_layer_behav/xsimk.exe -simmode gui -wdb pool_layer_behav.wdb -simrunnum 0 -socket 58717
 Design successfully loaded
-Design Loading Memory Usage: 8428 KB (Peak: 8428 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 7960 KB (Peak: 7960 KB)
+Design Loading CPU Usage: 77 ms

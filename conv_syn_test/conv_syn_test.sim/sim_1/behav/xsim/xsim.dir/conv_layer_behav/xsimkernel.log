@@ -2,3 +2,6 @@ Running: xsim.dir/conv_layer_behav/xsimk.exe -simmode gui -wdb conv_layer_behav.
 Design successfully loaded
 Design Loading Memory Usage: 5084 KB (Peak: 5084 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 5680 KB (Peak: 5680 KB)
+Simulation CPU Usage: 31 ms
