@@ -5,6 +5,6 @@ Jun 14 2018
 C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/conv_layer.v,1572806466,verilog,,C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v,,conv_layer,,,,,,,,
 C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/pool_layer.v,1572805718,verilog,,C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/relu_layer.v,,pool_layer,,,,,,,,
 C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/relu_layer.v,1572284088,verilog,,C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v,,relu_layer,,,,,,,,
-C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v,1572806458,verilog,,C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v,,simpleCNN,,,,,,,,
+C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN.v,1572813808,verilog,,C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v,,simpleCNN,,,,,,,,
 C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified/simpleCNN_tb.v,1572286841,verilog,,,,simpleCNN_tb,,,,,,,,
 C:/Users/Hannah/Desktop/MDP_CNN_Verilog/SimpleCNN/SImpleCNN_modified_Vivado/SImpleCNN_modified_Vivado.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
